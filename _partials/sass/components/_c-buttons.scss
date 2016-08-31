@@ -1,0 +1,32 @@
+.btn {
+    display: inline-block;
+    color: #fff;
+    @include type-space(padding, .5 .75);
+    line-height: 1;
+    background-color: color(links);
+    text-align: center;
+
+    &:hover {
+        background-color: color(links, light);
+        color: mix(#fff, color(links), 95%);
+    }
+
+    &:active {
+        background-color: color(links);
+        color: mix(#fff, color(links, darker), 70%);
+        box-shadow: inset 0 2px 1px rgba(black, .5),
+            0 0 3px rgba(color(links), .3);
+    }
+}
+
+.btn--small {
+    @include type-space((padding-top, padding-bottom), .25);
+}
+
+.btn--dark {
+    background-color: color(links, dark);
+
+    &:hover {
+        background-color: color(links);
+    }
+}

@@ -1,0 +1,22 @@
+.wrap {
+	display: block !important;
+	margin-left: auto;
+	margin-right: auto;
+	@extend %clearfix;
+}
+
+.wrap--small {
+	@include type-space(padding, 1 0);
+	max-width: 940px;
+	width: 90%;
+
+	@include mq(small) {
+		width: 98%;
+	}
+}
+
+.wrap--large {
+	@include type-space(padding, 1 0);
+    max-width: $max-site-width;
+	width: 98%;
+}

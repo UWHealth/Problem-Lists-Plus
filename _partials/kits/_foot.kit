@@ -1,0 +1,40 @@
+<!--@import '_support.kit'-->
+
+<footer role="contentinfo" class="bg-light">
+    <div class="wrap wrap--small">
+        <div class="grid">
+            <div class="grid__item half">
+                Copyright &copy; 2016 Problem Lists Plus
+            </div>
+            <div class="grid__item half">
+                <div class="align_right">
+                    Legal stuff
+                </div>
+            </div>
+        </div>
+    </div>
+         <!--[if lte IE 8]>
+         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+         <![endif]-->
+         <!--[if gt IE 8]><!-->
+         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+         <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.1.0.min.js"><\/script>')</script>
+         <!--<![endif]-->
+<!--======================
+        End jQuery
+==========================-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jets/0.11.0/jets.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <script>
+        var jets = new Jets({
+          searchTag: '#js-search',
+          contentTag: '#js-maps-list',
+          hideBy: 'transform: scaleY(0); width: 0; padding: 0;'
+        });
+        </script>
+</footer>
+</body>
+</html>

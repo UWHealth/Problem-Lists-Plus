@@ -1,0 +1,79 @@
+//Create grid classes
+
+@include grid-init();
+
+
+.grid {
+    @extend %grid;
+}
+
+.grid--narrow {
+    @extend %grid_narrow;
+}
+
+.grid--middle {
+    @extend %grid_middle;
+}
+
+.grid--wide {
+    @extend %grid_wide;
+}
+
+.grid--right {
+    @extend %grid_right;
+}
+
+.grid--full {
+	@extend %grid_full;
+}
+
+.grid > * {
+	@extend %grid_reset;
+}
+
+.grid__item {
+    @extend %grid_item;
+}
+
+.auto {
+    width: auto;
+}
+
+.full {
+    @extend %one_whole;
+}
+
+.half {
+	@extend %one_half;
+}
+
+.third {
+    @extend %one_third;
+}
+
+.quarter {
+	@extend %one_quarter;
+}
+
+.sidebar {
+    @extend %bigs_one_quarter;
+}
+
+.content {
+    @extend %bigs_three_quarters;
+}
+
+.content--wide {
+    @extend %smallish_four_fifths;
+    @extend %bigs_five_sixths;
+}
+
+.add-on {
+    @extend %smallish_one_fifth;
+    @extend %bigs_one_sixth;
+}
+
+
+.smalls-half {
+    @extend %smalls_one_half;
+}

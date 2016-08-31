@@ -1,0 +1,26 @@
+.top-nav {
+    position: relative;
+    z-index: 1;
+    @include type-space(padding, .25 .5);
+    opacity: .6;
+    background-color: #fff;
+    transition: opacity .1s ease-out;
+
+    &:hover {
+        opacity: 1;
+        box-shadow: 0 2px 5px rgba(color(links, darker), .1);
+    }
+
+    a {
+        display: inline-block;
+        @include type-space(height, 1);
+        line-height: 1;
+        text-align: center;
+    }
+
+    .btn {
+        vertical-align: bottom;
+        width: 12vw;
+        min-width: 8rem;
+    }
+}

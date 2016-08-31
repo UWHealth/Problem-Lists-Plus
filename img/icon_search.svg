@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="24" height="24">
+    <defs><style>
+    .a{fill:none; stroke-width:4px; stroke:#c41226}
+    .b{stroke-width:3px;}
+    </style></defs>
+<g class="a">
+    <circle class="d" cx="12" cy="12" r="9"/>
+    <line class="b" x1="27" y2="20" x2="19" y1="29"/></g>
+</svg>

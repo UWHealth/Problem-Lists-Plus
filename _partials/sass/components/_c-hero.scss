@@ -1,0 +1,34 @@
+.hero {
+	display: table;
+    position: relative;
+	width: 100%;
+    height: 40vh;
+    @include type-space(max-height, 20);
+    background-size: cover;
+    text-align: center;
+}
+
+.hero__body {
+	display: table-row;
+    vertical-align: middle;
+    @include type-space(padding-top, 2);
+    max-width: 98%;
+}
+
+.hero__description {
+    @include type-space(padding-top, 1);
+    @include type-space(padding-bottom, 1);
+    @include type-space(max-width, 24);
+    width: 95%;
+    @extend %h5;
+
+    @include mq(smalls) {
+        @include font-size($base-font-size, true);
+    }
+}
+
+[id="particle-canvas"] {
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}

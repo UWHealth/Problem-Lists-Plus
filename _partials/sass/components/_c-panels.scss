@@ -1,0 +1,50 @@
+.panel {
+    display: inline-block;
+    @include type-space(padding, .5);
+    background-color: rgba(#fff, .7);
+
+    &:after {
+        content: " ";
+        display: block;
+        border-bottom: 1px solid color(type, light);
+        width: 25%;
+        @include type-space(height, .5);
+        transition: width 100ms cubic-bezier(0.2, -0.26, 0.22, 1.1);
+    }
+}
+
+.panel--link {
+    outline: none;
+    transition: box-shadow, .1s ease-out;
+
+    &:after {
+        border-color: color(links);
+    }
+
+    &:hover,
+    &:focus {
+        color: color(links);
+        background-color: #fff;
+        box-shadow: 0 3px 5px rgba(color(links, darkest), .1),
+            0 1px 2px 1px rgba(color(links, darkest), .08);
+
+        &:after {
+            width: 33.33%;
+        }
+
+        .panel__body {
+            color: color(links);
+        }
+    }
+}
+
+.panel__body {
+    font-weight: 400;
+    font-family: $primary-font-stack;
+    color: color(type);
+}
+
+[data-jets] {
+    opacity: 1;
+    transition: all .2s ease-out;
+}

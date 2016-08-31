@@ -1,0 +1,21 @@
+.search {
+    position: relative;
+    @include type-space(margin-top, -1.5);
+}
+
+.search__input {
+    box-shadow: 0 0 28px rgba(color(links, darkest), .1);
+    outline: none;
+
+    &:focus {
+        box-shadow: 0 0 28px rgba(shade(color(links, darker), 50%), .25);
+    }
+}
+
+.search__button {
+    position: absolute;
+    @include type-space((top, right), .75);
+    @include type-space((width, height), 1.5);
+    @include type-space(padding, .5)
+    background: #fff url('../img/icon_search.svg') center no-repeat;
+}

@@ -1,0 +1,30 @@
+//Base table styles
+table {
+    @extend %type_vertical_rhythm;
+    @extend %space_b;
+    width: 100%;
+    background-color: transparent;
+    border-spacing: $grid-gutter 0;
+}
+
+th,
+td {
+	@include type-space(padding, 1 0 .5);
+	text-align: left;
+	vertical-align:top;
+	border: 0 solid color(type);
+	border-style: solid;
+}
+
+td {
+    border-top-width: 1px;
+}
+
+th {
+	font-weight: bold;
+}
+
+thead th {
+	vertical-align: bottom;
+	@include type-space(padding, 1 0 0 );
+}
