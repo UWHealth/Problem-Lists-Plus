@@ -1,29 +1,61 @@
-<!--$pageTitle = Home - -->
-<!--$logo-visibility = hidden-->
-<!--@import '_meta.kit'-->
-<!--@import '_head.kit'-->
-<header class="hero bg-dark" role="banner">
-        <div style="position:absolute;top:0;left:0;right:0;bottom:0">
-            <div id="particle-canvas"></div>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/png" href="/favicons/favicon-196x196.png" sizes="196x196">
+    <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="32x32">
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png">
+    <!--Win 8/10 IE 10/11 references-->
+    <meta name="application-name" content="Problem Lists Plus"/>
+
+    <title>Osteoperosis - Problem Lists Plus</title>
+
+    <link rel="stylesheet" href="css/main.css" media="screen">
+    <link rel="stylesheet" href="css/print.css" media="print">
+
+</head>
+<body>
+    <script>document.documentElement.className = "js"</script>
+<header class="bg-light hero hero--small" role="banner">
+    <nav class="top-nav" role="navigation">
+    <div class="grid grid--middle">
+        <div class="logo-container grid__item half" style="visibility:visible">
+            <a href="/" title="Go Home" class="nowrap">
+                <img src="img/icon_arrow.svg">
+                <div class="logo logo--top-nav align_middle">
+                    Problem Lists <span class="logo__plus">Plus</span>
+                </div>
+            </a>
         </div>
-        <div class="hero__body">
-            <div class="wrap wrap--large">
-                <h1 class="logo z1">Problem Lists <span class="logo__plus">Plus</span></h1>
-                <p class="wrap hero__description z1">
-                    Cras mattis consectetur purus sit amet fermentum. Purus Fermentum Morbi leo risus, porta ac consectetur, vestibulum at eros. <a href="about.html">Learn More</a>
-                </p>
+        <div class="grid__item half">
+            <div class="grid grid--right grid--middle">
+                <div class="grid__item auto"><a href="about.html">About</a></div>
+                <div class="grid__item auto"><a href="register.html"><span class="btn btn--small btn--dark">Register Now</span></a></div>
             </div>
         </div>
-
     </div>
-
+</nav>
+    <div class="hero__body">
+        <div class="wrap wrap--large">
+            <h1 class="heading--page">Osteoperosis</h1>
+            <p class="h6 space_t_0 pad_b">
+                <strong>SNOMED Code:</strong> 364859006
+            </p>
+        </div>
+    </div>
 </header>
 
 
-<section class="search wrap wrap--large">
-    <label for="js-search" class="visually_hidden">Search</label>
-    <input id="js-search" class="search__input pad full space_t_neg" autofocus placeholder="Find a Map"/>
-    <button class="search__button" tabindex="-1"> </button>
+<section class="wrap wrap--large pad_t_half space_t_neg">
+    <a href="" class="h6 btn btn--large align_right space_t_neg">Download Map</a>
 </section>
 
 
@@ -140,5 +172,30 @@
         </div>
     </div>
 </main>
-<!--@import 'scripts.kit'-->
-<!--@import 'foot.kit'-->
+<section class="bg-dark pad_t pad_b">
+    <div class="wrap wrap--large">
+        <h2 class="heading--section">Supported By</h2>
+        <div class="grid grid--wide">
+            <a class="grid__item third" href="http://www.uwhealth.org">
+                <img class="support-logo" src="http://cosmos.uwhealth.org/responsive/img/nav/build.125.logo_uwhealth_large.png" alt="UW Health">
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer role="contentinfo" class="bg-light">
+    <div class="wrap wrap--small">
+        <div class="grid">
+            <div class="grid__item half">
+                Copyright &copy; 2016 Problem Lists Plus
+            </div>
+            <div class="grid__item half">
+                <div class="align_right">
+                    Legal stuff
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

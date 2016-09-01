@@ -1,5 +1,4 @@
 .panel {
-    display: inline-block;
     @include type-space(padding, .5);
     background-color: rgba(#fff, .7);
 
@@ -9,11 +8,13 @@
         border-bottom: 1px solid color(type, light);
         width: 25%;
         @include type-space(height, .5);
+        @include type-space(max-width, 10);
         transition: width 100ms cubic-bezier(0.2, -0.26, 0.22, 1.1);
     }
 }
 
 .panel--link {
+    display: inline-block;
     outline: none;
     transition: box-shadow, .1s ease-out;
 
@@ -44,7 +45,7 @@
     color: color(type);
 }
 
-[data-jets] {
-    opacity: 1;
-    transition: all .2s ease-out;
+.panel--header {
+    display: block;
+    background-color: transparent;
 }

@@ -1,7 +1,7 @@
 //Base table styles
 table {
     @extend %type_vertical_rhythm;
-    @extend %space_b;
+    @include type-space(margin-bottom, 1);
     width: 100%;
     background-color: transparent;
     border-spacing: $grid-gutter 0;
@@ -26,5 +26,5 @@ th {
 
 thead th {
 	vertical-align: bottom;
-	@include type-space(padding, 1 0 0 );
+	@include type-space(padding, 1 0 0);
 }

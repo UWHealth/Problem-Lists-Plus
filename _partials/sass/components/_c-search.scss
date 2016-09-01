@@ -19,3 +19,15 @@
     @include type-space(padding, .5)
     background: #fff url('../img/icon_search.svg') center no-repeat;
 }
+
+[data-jets] {
+    opacity: 1;
+    transition: all .2s ease-out;
+    transform-origin: bottom;
+}
+
+[data-jets]:not([data-jets="osteoperosis"]) {
+    opacity: .6;
+    pointer-events: none;
+    cursor: default;
+}

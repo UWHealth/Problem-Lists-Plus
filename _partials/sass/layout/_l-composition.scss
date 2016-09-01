@@ -7,7 +7,7 @@
 
 .wrap--small {
 	@include type-space(padding, 1 0);
-	max-width: 940px;
+	@include rems(max-width, 924px);
 	width: 90%;
 
 	@include mq(small) {
@@ -17,6 +17,6 @@
 
 .wrap--large {
 	@include type-space(padding, 1 0);
-    max-width: $max-site-width;
+	@include rems(max-width, $max-site-width);
 	width: 98%;
 }
