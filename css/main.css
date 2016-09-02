@@ -2335,7 +2335,7 @@ _NOTE: Do not mistake this for true grid items. This should only be used for the
           transform-origin: bottom;
 }
 
-[data-jets]:not([data-jets="osteoperosis"]) {
+[data-jets]:not([data-jets="osteoporosis"]) {
   opacity: .6;
   pointer-events: none;
   cursor: default;
