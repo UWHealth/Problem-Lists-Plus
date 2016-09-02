@@ -2077,7 +2077,7 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
 }
 
 .heading--section {
-  color: #6E6E6E;
+  color: type(light);
   font-size: 31.36px;
   font-size: 1.96rem;
   line-height: 1.53061;

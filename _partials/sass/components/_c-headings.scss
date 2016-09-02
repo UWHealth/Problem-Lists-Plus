@@ -73,7 +73,7 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of #{$
 
 
 .heading--section {
-	color: #6E6E6E;
+	color: type(light);
 	@include font-size(modular-scale(2), true);
 	font-weight: normal;
 }
