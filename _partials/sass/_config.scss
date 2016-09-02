@@ -99,7 +99,7 @@ Determines whether to generate `@font-face` values that point at an .eot file. F
 
 $primary-font-stack:      	"clearsans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 
-$secondary-font-stack:     	"merriweather", "Garamond","Baskerville", "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+$secondary-font-stack:     	"Merriweather", "Garamond","Baskerville", "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
 
 $monospace-font-stack: 		"Consolas", "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Monaco", "Courier New", "Courier", monospace;
 
@@ -109,11 +109,11 @@ $icon-font-stack: 			null;
 $use-web-fonts: 		true;
 //Relative path to fonts from CSS file
 $font-file-location: 	"fonts";
-$font-file-name:        ("clearsans",  "merriweather");
-$font-weights:          (400 , 700 ),  (400,  700 );
-$font-italics:          (true, true),  (true, true);
+$font-file-name:        ("clearsans");
+$font-weights:          (400 , 700 );
+$font-italics:          (true, false);
 
-$font-include-woff2:    (false      ,  false      );
+$font-include-woff2:    (true);
 $font-include-eot: 		true;
 
 
@@ -319,16 +319,24 @@ $base-colors: (
 */
 
 $base-colors: (
-	'type': #252D34,
-
+	'type': (
+		'base':#252D34,
+		'light':#6E6E6E,
+		'lightest': #ddd
+	),
 	'links': (
 		'base': #C41226,
 		'dark': #A32A37,
 		'darker': #901220,
-		'light': #C82A38
+		'darkest': #490810,
+		'light': #D63846
 	),
 
-	'bg': #f2f2f2,
+	'bg': (
+		'base':#f2f2f2,
+		'dark': #ddd,
+		'darker':#6E6E6E
+	),
 
 	'accent': mix(#d40026, #AD0909, 45%),
 

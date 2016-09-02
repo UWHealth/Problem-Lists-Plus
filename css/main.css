@@ -786,7 +786,7 @@ Based on [Compass' font-face mixin](http://compass-style.org/reference/compass/c
 @font-face {
   font-family: "clearsans";
   src: url("fonts/clearsans-400.eot");
-  src: url('fonts/clearsans-400.eot?#iefix') format('embedded-opentype'), url("fonts/clearsans-400.woff") format("woff"), url("fonts/clearsans-400.ttf") format("truetype"), url("fonts/clearsans-400.svg#clearsans400") format("svg");
+  src: url('fonts/clearsans-400.eot?#iefix') format('embedded-opentype'), url("fonts/clearsans-400.woff2") format("woff2"), url("fonts/clearsans-400.woff") format("woff"), url("fonts/clearsans-400.ttf") format("truetype"), url("fonts/clearsans-400.svg#clearsans400") format("svg");
   font-weight: 400;
   font-style: normal;
 }
@@ -794,7 +794,7 @@ Based on [Compass' font-face mixin](http://compass-style.org/reference/compass/c
 @font-face {
   font-family: "clearsans";
   src: url("fonts/clearsans-400-italic.eot");
-  src: url('fonts/clearsans-400-italic.eot?#iefix') format('embedded-opentype'), url('fonts/clearsans-400-italic.woff') format('woff'), url('fonts/clearsans-400-italic.ttf') format('truetype'), url('fonts/clearsans-400-italic.svg#clearsans400italic') format('svg');
+  src: url('fonts/clearsans-400-italic.eot?#iefix') format('embedded-opentype'), url("fonts/clearsans-400-italic.woff2") format("woff2"), url('fonts/clearsans-400-italic.woff') format('woff'), url('fonts/clearsans-400-italic.ttf') format('truetype'), url('fonts/clearsans-400-italic.svg#clearsans400italic') format('svg');
   font-weight: 400;
   font-style: italic;
 }
@@ -802,7 +802,7 @@ Based on [Compass' font-face mixin](http://compass-style.org/reference/compass/c
 @font-face {
   font-family: "clearsans";
   src: url("fonts/clearsans-700.eot");
-  src: url('fonts/clearsans-700.eot?#iefix') format('embedded-opentype'), url("fonts/clearsans-700.woff") format("woff"), url("fonts/clearsans-700.ttf") format("truetype"), url("fonts/clearsans-700.svg#clearsans700") format("svg");
+  src: url('fonts/clearsans-700.eot?#iefix') format('embedded-opentype'), url("fonts/clearsans-700.woff2") format("woff2"), url("fonts/clearsans-700.woff") format("woff"), url("fonts/clearsans-700.ttf") format("truetype"), url("fonts/clearsans-700.svg#clearsans700") format("svg");
   font-weight: 700;
   font-style: normal;
 }
@@ -810,39 +810,7 @@ Based on [Compass' font-face mixin](http://compass-style.org/reference/compass/c
 @font-face {
   font-family: "clearsans";
   src: url("fonts/clearsans-700-italic.eot");
-  src: url('fonts/clearsans-700-italic.eot?#iefix') format('embedded-opentype'), url('fonts/clearsans-700-italic.woff') format('woff'), url('fonts/clearsans-700-italic.ttf') format('truetype'), url('fonts/clearsans-700-italic.svg#clearsans700italic') format('svg');
-  font-weight: 700;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "merriweather";
-  src: url("fonts/merriweather-400.eot");
-  src: url('fonts/merriweather-400.eot?#iefix') format('embedded-opentype'), url("fonts/merriweather-400.woff") format("woff"), url("fonts/merriweather-400.ttf") format("truetype"), url("fonts/merriweather-400.svg#merriweather400") format("svg");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "merriweather";
-  src: url("fonts/merriweather-400-italic.eot");
-  src: url('fonts/merriweather-400-italic.eot?#iefix') format('embedded-opentype'), url('fonts/merriweather-400-italic.woff') format('woff'), url('fonts/merriweather-400-italic.ttf') format('truetype'), url('fonts/merriweather-400-italic.svg#merriweather400italic') format('svg');
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "merriweather";
-  src: url("fonts/merriweather-700.eot");
-  src: url('fonts/merriweather-700.eot?#iefix') format('embedded-opentype'), url("fonts/merriweather-700.woff") format("woff"), url("fonts/merriweather-700.ttf") format("truetype"), url("fonts/merriweather-700.svg#merriweather700") format("svg");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "merriweather";
-  src: url("fonts/merriweather-700-italic.eot");
-  src: url('fonts/merriweather-700-italic.eot?#iefix') format('embedded-opentype'), url('fonts/merriweather-700-italic.woff') format('woff'), url('fonts/merriweather-700-italic.ttf') format('truetype'), url('fonts/merriweather-700-italic.svg#merriweather700italic') format('svg');
+  src: url('fonts/clearsans-700-italic.eot?#iefix') format('embedded-opentype'), url("fonts/clearsans-700-italic.woff2") format("woff2"), url('fonts/clearsans-700-italic.woff') format('woff'), url('fonts/clearsans-700-italic.ttf') format('truetype'), url('fonts/clearsans-700-italic.svg#clearsans700italic') format('svg');
   font-weight: 700;
   font-style: italic;
 }
@@ -1225,7 +1193,7 @@ a {
 }
 
 a:hover, a:focus {
-  color: #C82A38;
+  color: #D63846;
 }
 
 a:active {
@@ -1242,7 +1210,7 @@ a:active, a:hover {
 
 hr {
   height: 2px;
-  border-top: 2px solid #e5e5e5;
+  border-top: 2px solid #ddd;
   margin: 24px 0;
   margin:  1.5rem 0;
 }
@@ -1466,7 +1434,7 @@ select::-ms-value {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "merriweather", "Garamond", "Baskerville", "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+  font-family: "Merriweather", "Garamond", "Baskerville", "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
 }
 
 table, p, address, pre {
@@ -1583,33 +1551,38 @@ nav ul {
 table {
   margin-bottom: 24px;
   margin-bottom:  1.5rem;
+  margin-left: -12px;
+  margin-left:  -0.75rem;
+  border-spacing: 0.75rem 0;
   width: 100%;
   background-color: transparent;
-  border-spacing: 24px 0;
 }
 
 th,
 td {
-  padding: 24px 0 12px;
-  padding:  1.5rem 0 0.75rem;
-  text-align: left;
-  vertical-align: top;
-  border: 0 solid #252D34;
+  border: 0 solid #6E6E6E;
   border-style: solid;
+  padding: 6px 0 24px;
+  padding:  0.375rem 0 1.5rem;
+  vertical-align: top;
+  text-align: left;
 }
 
-td {
+td,
+th {
   border-top-width: 1px;
 }
 
 th {
-  font-weight: bold;
+  font-weight: normal;
 }
 
 thead th {
   vertical-align: bottom;
-  padding: 24px 0 0;
-  padding:  1.5rem 0 0;
+  padding: 0 0 6px;
+  padding:  0 0 0.375rem;
+  color: #C41226;
+  border-width: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -1702,6 +1675,10 @@ sup {
 
 sub {
   bottom: -0.25ex;
+}
+
+abbr {
+  letter-spacing: 0.05em;
 }
 
 code,
@@ -1870,12 +1847,24 @@ q:first-child {
   width: 100%;
 }
 
+.two-fifths {
+  width: 40%;
+}
+
+.three-fifths {
+  width: 60%;
+}
+
 .quarter {
   width: 25%;
 }
 
 .third {
   width: 33.33333%;
+}
+
+.two-thirds {
+  width: 66.66667%;
 }
 
 .half {
@@ -1912,8 +1901,23 @@ q:first-child {
   }
 }
 
+@media only screen and (max-width: 640px) {
+  .grid--wide {
+    margin-left:  -1.5rem;
+  }
+  .grid--wide > .grid__item {
+    padding-left:  1.5rem;
+  }
+}
+
 .auto {
   width: auto;
+}
+
+@media only screen and (max-width: 640px) {
+  .grid--stack > .grid__item {
+    width: 100%;
+  }
 }
 
 .top-nav {
@@ -1929,9 +1933,9 @@ q:first-child {
 
 .top-nav:hover {
   opacity: 1;
-  -webkit-box-shadow: 0 2px 5px rgba(144, 18, 32, 0.1);
-     -moz-box-shadow: 0 2px 5px rgba(144, 18, 32, 0.1);
-          box-shadow: 0 2px 5px rgba(144, 18, 32, 0.1);
+  -webkit-box-shadow: 0 2px 5px rgba(73, 8, 16, 0.1);
+     -moz-box-shadow: 0 2px 5px rgba(73, 8, 16, 0.1);
+          box-shadow: 0 2px 5px rgba(73, 8, 16, 0.1);
 }
 
 .top-nav a {
@@ -1972,10 +1976,10 @@ q:first-child {
 
 .btn:hover, .btn:focus {
   color: #fcf3f4;
-  background-color: #C82A38;
-  -webkit-box-shadow: 0 2px 15px 1px rgba(163, 42, 55, 0.3), 0 1px 2px 1px rgba(0, 0, 0, 0.1);
-     -moz-box-shadow: 0 2px 15px 1px rgba(163, 42, 55, 0.3), 0 1px 2px 1px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 2px 15px 1px rgba(163, 42, 55, 0.3), 0 1px 2px 1px rgba(0, 0, 0, 0.1);
+  background-color: #D63846;
+  -webkit-box-shadow: 0 2px 15px 1px rgba(163, 42, 55, 0.3), 0 1px 2px 1px rgba(73, 8, 16, 0.1);
+     -moz-box-shadow: 0 2px 15px 1px rgba(163, 42, 55, 0.3), 0 1px 2px 1px rgba(73, 8, 16, 0.1);
+          box-shadow: 0 2px 15px 1px rgba(163, 42, 55, 0.3), 0 1px 2px 1px rgba(73, 8, 16, 0.1);
 }
 
 .btn:active {
@@ -2294,9 +2298,9 @@ _NOTE: Do not mistake this for true grid items. This should only be used for the
 }
 
 .search__input {
-  -webkit-box-shadow: 0 0 28px rgba(0, 0, 0, 0.1);
-     -moz-box-shadow: 0 0 28px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0 28px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 28px rgba(73, 8, 16, 0.1);
+     -moz-box-shadow: 0 0 28px rgba(73, 8, 16, 0.1);
+          box-shadow: 0 0 28px rgba(73, 8, 16, 0.1);
   outline: none;
 }
 
@@ -2340,13 +2344,13 @@ _NOTE: Do not mistake this for true grid items. This should only be used for the
 .logo {
   display: inline-block;
   white-space: nowrap;
-  font-family: "merriweather", "Garamond", "Baskerville", "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+  font-family: "Merriweather", "Garamond", "Baskerville", "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
   font-weight: 700;
   color: #252D34;
 }
 
 @media only screen and (max-width: 640px) {
-  .hero .logo {
+  .hero .logo--hero {
     font-size: 8vw;
   }
 }
@@ -2384,7 +2388,7 @@ _NOTE: Do not mistake this for true grid items. This should only be used for the
 .panel:after {
   content: " ";
   display: block;
-  border-bottom: 1px solid #70787f;
+  border-bottom: 1px solid #6E6E6E;
   width: 25%;
   height: 12px;
   height:  0.75rem;
@@ -2397,9 +2401,9 @@ _NOTE: Do not mistake this for true grid items. This should only be used for the
 .panel--link {
   display: inline-block;
   outline: none;
-  -webkit-transition: -webkit-box-shadow, .1s ease-out;
-          transition: -moz-box-shadow, .1s ease-out;
-          transition: box-shadow, .1s ease-out;
+  -webkit-transition: -webkit-box-shadow .1s ease-out;
+          transition: -moz-box-shadow .1s ease-out;
+          transition: box-shadow .1s ease-out;
 }
 
 .panel--link:after {
@@ -2409,9 +2413,9 @@ _NOTE: Do not mistake this for true grid items. This should only be used for the
 .panel--link:hover, .panel--link:focus {
   color: #C41226;
   background-color: #fff;
-  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1), 0 1px 2px 1px rgba(0, 0, 0, 0.08);
-     -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1), 0 1px 2px 1px rgba(0, 0, 0, 0.08);
-          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1), 0 1px 2px 1px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0 9px 18px rgba(73, 8, 16, 0.1), 0 1px 3px 1px rgba(144, 18, 32, 0.1), 0 2px 5px -1px rgba(73, 8, 16, 0.08);
+     -moz-box-shadow: 0 9px 18px rgba(73, 8, 16, 0.1), 0 1px 3px 1px rgba(144, 18, 32, 0.1), 0 2px 5px -1px rgba(73, 8, 16, 0.08);
+          box-shadow: 0 9px 18px rgba(73, 8, 16, 0.1), 0 1px 3px 1px rgba(144, 18, 32, 0.1), 0 2px 5px -1px rgba(73, 8, 16, 0.08);
 }
 
 .panel--link:hover:after, .panel--link:focus:after {
@@ -3398,7 +3402,7 @@ _NOTE: Do not mistake this for true grid items. This should only be used for the
 }
 
 .txt_secondary {
-  font-family: "merriweather", "Garamond", "Baskerville", "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+  font-family: "Merriweather", "Garamond", "Baskerville", "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
 }
 
 @media only screen and (max-width: 640px) {
@@ -3435,7 +3439,7 @@ _NOTE: Do not mistake this for true grid items. This should only be used for the
     font-family: "clearsans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   }
   .smalls_txt_secondary {
-    font-family: "merriweather", "Garamond", "Baskerville", "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+    font-family: "Merriweather", "Garamond", "Baskerville", "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
   }
 }
 
@@ -3473,7 +3477,7 @@ _NOTE: Do not mistake this for true grid items. This should only be used for the
     font-family: "clearsans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   }
   .bigs_txt_secondary {
-    font-family: "merriweather", "Garamond", "Baskerville", "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+    font-family: "Merriweather", "Garamond", "Baskerville", "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
   }
 }
 

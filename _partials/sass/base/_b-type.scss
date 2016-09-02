@@ -101,6 +101,9 @@ sub {
 	bottom: -0.25ex;
 }
 
+abbr {
+	letter-spacing: 0.05em;
+}
 
 // 1. Fix an odd quirk whereby, without this, code blocks are rendered at a
 //    font-size smaller than 1em.

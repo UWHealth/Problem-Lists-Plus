@@ -4,7 +4,9 @@
     font-family: $secondary-font-stack;
     font-weight: 700;
     color: color(type);
+}
 
+.logo--hero {
     @include mq(smalls) {
         .hero & {
             font-size: 8vw;

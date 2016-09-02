@@ -305,7 +305,7 @@
 	var returnRandomArrayitem = function(array) {
 		return array[Math.floor(Math.random()*array.length)];
 	};
-
-    var pna = new ParticleNetworkAnimation();	pna.init($('#particle-canvas')[0]);
-
+	if($('#particle-canvas')[0]){
+    	var pna = new ParticleNetworkAnimation();	pna.init($('#particle-canvas')[0]);
+	}
 }());

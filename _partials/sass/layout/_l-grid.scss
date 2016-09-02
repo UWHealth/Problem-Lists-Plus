@@ -17,6 +17,14 @@
 
 .grid--wide {
     @extend %grid_wide;
+
+    @include mq(smalls) {
+        @include type-space(margin-left, -1);
+
+        & > .grid__item {
+            @include type-space(padding-left, 1);
+        }
+    }
 }
 
 .grid--right {
@@ -47,8 +55,28 @@
 	@extend %one_half;
 }
 
+.two-fifths {
+    @extend %two_fifths;
+}
+
+.three-fifths {
+    @extend %three_fifths;
+}
+
 .third {
     @extend %one_third;
+}
+
+.two-thirds {
+    @extend %two_thirds;
+}
+
+@include mq(smalls) {
+    .grid--stack {
+        & > .grid__item {
+            width: 100%;
+        }
+    }
 }
 
 .quarter {
