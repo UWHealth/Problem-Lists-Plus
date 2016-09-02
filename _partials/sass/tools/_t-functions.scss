@@ -726,6 +726,8 @@ $font-warn: false;
 	$font-base: $base-font-size,
 	$baseline-slack: $font-looseness
 ){
+	$smallest-size: if(length($type-small-size) > 1, nth($type-small-size, 1), $type-small-size);
+
     //Make sure baseline-slack is a percentage
     @if unit($baseline-slack) != "%" {
         @warn "Baseline-slack/font-looseness should be a percentage. Trying to convert.";
@@ -741,10 +743,10 @@ $font-warn: false;
     // Use global settings to help determine, where possible
 	$sm-lh-upper-bound: max(
         2.75,
-        baseline($type-small-size, $base-line-height) + 1.25
+        baseline($smallest-size, $base-line-height) + 1.25
     );
 	$sm-lh-lower-bound: min(
-        baseline($type-small-size,
+        baseline($smallest-size,
             ($base-line-height - ($base-line-height / 3))
         ),
         $sm-lh-upper-bound - .5
@@ -756,7 +758,7 @@ $font-warn: false;
 	$lg-lh-lower-bound: 0.91 + (($baseline-slack / 100%) / 8);
 
     //Smallest/Largest font sizes to calculate against
-	$sm-font-size: $type-small-size / 1px - 1.5;
+	$sm-font-size: $smallest-size / 1px - 1.5;
 	$lg-font-size: max(10, 250 * ($baseline-slack / 100%));
 
     //Baseline-curve progress percentages

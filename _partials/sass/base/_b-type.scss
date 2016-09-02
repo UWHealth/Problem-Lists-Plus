@@ -65,9 +65,7 @@ small {
 	@include font-size($type-small-size, $small-lh);
 }
 
-//
-// Not strictly a paragraph, but probably doesn’t need its own section.
-//
+
 address {
     @extend %type_vertical_rhythm;
 }

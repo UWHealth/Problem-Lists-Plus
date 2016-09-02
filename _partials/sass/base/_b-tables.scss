@@ -2,8 +2,9 @@
 table {
     @extend %type_vertical_rhythm;
     @include type-space(margin-bottom, 1);
-    @include type-space(margin-left, -.5);
-    border-spacing: rems($grid-gutter/2) 0;
+    @include type-space(margin-left, -.5); //adjust for border spacing
+    @include type-space(margin-top, -.375);
+    border-spacing: rems($grid-gutter/2) rems(($grid-gutter/2) - 1px);
     width: 100%;
     background-color: transparent;
 }
@@ -11,9 +12,8 @@ table {
 th,
 td {
     border: 0 solid color(type, light);
-    border-style: solid;
-    @include type-space(padding, .25 0 1);
-    vertical-align:top;
+    @include type-space(padding, .25 0 .75);
+    vertical-align: top;
 	text-align: left;
 }
 
@@ -28,7 +28,7 @@ th {
 
 thead th {
 	vertical-align: bottom;
-	@include type-space(padding, 0 0 .25);
+	padding: 0;
     color: color(links);
     border-width: 0;
 }

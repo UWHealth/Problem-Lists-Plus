@@ -82,7 +82,6 @@ Sass files are imported in order from lowest specificity to highest.
 @import 'layout/l-composition';
 @import 'layout/l-grid';
 @import 'layout/l-top-nav';
-@import 'layout/l-backgrounds';
 
 //OOCSS styles and base-level classes
 // (+1 specificity)
@@ -103,5 +102,6 @@ Sass files are imported in order from lowest specificity to highest.
 //High-specificity css and overrides classes (usually have !important).
 // Typically single-use classes
 @import 'overrides/ov-polyfills';
+@import 'overrides/ov-colors';
 @import 'overrides/ov-overrides';
 @import 'overrides/ov-debug';

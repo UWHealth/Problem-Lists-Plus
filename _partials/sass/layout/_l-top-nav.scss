@@ -1,7 +1,7 @@
 .top-nav {
     position: relative;
     z-index: 1;
-    @include type-space(padding, .25 .5);
+    @include type-space(padding, .3335 .5); //compensate for padding mis-alignment
     opacity: .6;
     background-color: #fff;
     transition: opacity .1s ease-out;

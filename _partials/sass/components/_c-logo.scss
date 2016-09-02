@@ -28,6 +28,16 @@
 
 .logo--top-nav {
     line-height: 1;
+    outline: none;
+
+    &:hover,
+    &:focus {
+        text-shadow: 0 0 5px rgba(color(links), .1);
+    }
+
+    &:active {
+        background-color: rgba(color(links, darker), .1);
+    }
 }
 
 
