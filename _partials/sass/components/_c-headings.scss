@@ -86,6 +86,5 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of #{$
 
 	@include mq(smalls) {
 		@include font-size(modular-scale(3), true);
-		word-break: break-all;
 	}
 }

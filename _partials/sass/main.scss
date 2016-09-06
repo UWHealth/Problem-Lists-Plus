@@ -79,20 +79,22 @@ Sass files are imported in order from lowest specificity to highest.
 
 //Grids, alignment and higher-level classes
 // (+1 specificity)
-@import 'layout/l-composition';
 @import 'layout/l-grid';
+@import 'layout/l-composition';
 @import 'layout/l-top-nav';
+@import 'layout/l-media-object';
 
 //OOCSS styles and base-level classes
 // (+1 specificity)
-@import 'components/c-buttons';
+@import 'components/c-type';
 @import 'components/c-headings';
 @import 'components/c-lists';
-@import 'components/c-media-object';
 @import 'components/c-hero';
 @import 'components/c-search';
 @import 'components/c-logo';
+@import 'components/c-buttons';
 @import 'components/c-panels';
+@import 'components/c-modal';
 
 //Section-specific and theme-/skin-based styles
 //(+2-4 specificity)

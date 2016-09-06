@@ -210,7 +210,18 @@
             </section>
         </div>
     </article>
-    <!--[if lte IE 8]>
+</main>
+<div class="js-modal modal__bg js-modal--dismiss"></div>
+<div class="js-modal modal">
+    <div class="modal__body clearfix">
+        <h3 class="h5 heading--page">Disclaimer</h3>
+        <p class="clearfix">
+            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui.
+        </p>
+        <button class="js-modal--dismiss btn">Acknowledge</button>
+    </div>
+</div>
+<!--[if lte IE 8]>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <![endif]-->
 <!--[if gt IE 8]><!-->
@@ -222,13 +233,14 @@ End jQuery
 ==========================-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jets/0.11.0/jets.min.js"></script>
 <script src="js/plugins.min.js"></script>
-    <script>
-    var url = "https://spreadsheets.google.com/feeds/list/1bouu2Ni3akgRGp9G4-kUv2z18RIKPs2n8MDRkkhsmy8/1/public/basic?alt=json"
-    $.getJSON(url).done(function(data){
-        console.log(data);
+<script>
+    $(function(){
+        $('.js-modal').show();
+        $('.js-modal--dismiss').on('click', function(e){
+            $('.js-modal').hide();
+        });
     });
-    </script>
-</main>
+</script>
 <section class="bg-dark pad_t pad_b">
     <div class="wrap wrap--large">
         <h2 class="heading--section">Supported By</h2>

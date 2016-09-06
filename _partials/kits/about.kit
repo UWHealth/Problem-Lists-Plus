@@ -1,0 +1,70 @@
+<!--$pageTitle = About -->
+<!--$logo-visibility = visible -->
+<!--@import '_meta.kit'-->
+<header class="bg-light hero hero--small" role="banner">
+    <!--@import '_head.kit'-->
+    <div class="hero__body">
+        <div class="wrap wrap--small">
+            <h1 class="heading--page">About Problem Lists Plus</h1>
+            <div class="content space_t_0 pad_b">
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum.</p>
+
+                <p class="pad_b">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas faucibus mollis interdum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<main class="space_b_2 pad_t" role="main">
+    <div class="wrap wrap--small">
+        <h2 class="heading--section">Specialty Content Experts</h2>
+        <div id="js-people" class="grid grid--stack">
+        </div>
+    </div>
+    <!--@import scripts-->
+    <script>
+    //build people template
+    function template(data) {
+        var feed = data.feed;
+        var html = '<p class="grid__item space_t"><strong>' + feed.title.$t + '</strong></p>';
+
+        for (var i = 0; i < feed.entry.length; i++){
+            var current = feed.entry[i];
+            var person = ['',
+                '<article class="grid__item third">',
+                    '<div class="panel space_b_half">',
+                        '<h3 class="h6 txt-normal">',
+                            current.gsx$name.$t,
+                        '</h3>',
+                        '<div class="panel__foot">',
+                            current.gsx$specialty.$t + ', ',
+                            current.gsx$institution.$t,
+                        '</div>',
+                    '</div>',
+                '</article>'
+            ].join('');
+            html += person;
+        };
+
+        return html;
+    }
+
+    //AJAX spreadsheet data
+    (function(){
+        var url = "https://spreadsheets.google.com/feeds/list/1XDhHCs4h9-OqTHn8nh12Ti1cI--3oaJSOksOdZc7Zsw/WORKSHEET/public/full?alt=json";
+        var sheets = 6;
+        var html;
+
+        for (var i = 1; i < sheets; i++) {
+            var json = url.replace('WORKSHEET', ""+i+"");
+
+            $.getJSON(json).done(function(data) {
+                $(template(data)).prependTo($('#js-people'));
+            });
+        }
+
+    }());
+    </script>
+</main>
+<!--@import 'foot.kit'-->

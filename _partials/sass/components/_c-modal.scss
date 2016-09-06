@@ -1,0 +1,28 @@
+.modal {
+	max-width: 940px;
+	position: fixed;
+	margin: auto;
+	top: 10%;
+	z-index: 11;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.modal__body {
+	background-color: #fff;
+	padding: 1.5rem;
+	box-shadow: 0 5px 25px -5px;
+    width: 94%;
+    margin: auto;
+}
+
+.modal__bg {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,.2);
+	z-index: 10;
+}

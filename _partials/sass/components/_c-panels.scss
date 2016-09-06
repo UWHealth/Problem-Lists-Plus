@@ -47,6 +47,10 @@
     color: color(type);
 }
 
+.panel__foot {
+    color: color(links);
+}
+
 .panel--header {
     display: block;
     background-color: transparent;

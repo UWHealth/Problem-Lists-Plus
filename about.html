@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="A problem-oriented medical mapping system">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/png" href="favicons/favicon.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicons/favicon-196x196.png" sizes="196x196">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-touch-icon-152x152.png">
+    <!--Win 8/10 IE 10/11 references-->
+    <meta name="application-name" content="Problem Lists Plus"/>
+    <title>About Problem Lists Plus</title>
+
+    <link rel="stylesheet" href="css/main.css" media="screen">
+    <link rel="stylesheet" href="css/print.css" media="print">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,700" >
+</head>
+<body>
+    <script>document.documentElement.className = "js"</script>
+<header class="bg-light hero hero--small" role="banner">
+    <nav class="top-nav" role="navigation">
+    <div class="grid grid--middle">
+        <div class="logo-container grid__item half" style="visibility:visible">
+            <a href="index.html" title="Go Home" class="nowrap">
+                <img src="img/icon_arrow.svg">
+                <div class="logo logo--top-nav align_middle">
+                    Problem Lists <span class="logo__plus">Plus</span>
+                </div>
+            </a>
+        </div>
+        <div class="grid__item half">
+            <div class="grid grid--right grid--middle">
+                <div class="grid__item auto"><a href="about.html">About</a></div>
+                <div class="grid__item auto"><a href="register.html"><span class="btn btn--small btn--dark">Register Now</span></a></div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <div class="hero__body">
+        <div class="wrap wrap--small">
+            <h1 class="heading--page">About Problem Lists Plus</h1>
+            <div class="content space_t_0 pad_b">
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum.</p>
+
+                <p class="pad_b">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas faucibus mollis interdum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<main class="space_b_2 pad_t" role="main">
+    <div class="wrap wrap--small">
+        <h2 class="heading--section">Specialty Content Experts</h2>
+        <div id="js-people" class="grid grid--stack">
+        </div>
+    </div>
+    <!--[if lte IE 8]>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-2.1.0.min.js"><\/script>')</script>
+<!--<![endif]-->
+<!--======================
+End jQuery
+==========================-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jets/0.11.0/jets.min.js"></script>
+<script src="js/plugins.min.js"></script>
+    <script>
+    //build people template
+    function template(data) {
+        var feed = data.feed;
+        var html = '<p class="grid__item space_t"><strong>' + feed.title.$t + '</strong></p>';
+
+        for (var i = 0; i < feed.entry.length; i++){
+            var current = feed.entry[i];
+            var person = ['',
+                '<article class="grid__item third">',
+                    '<div class="panel space_b_half">',
+                        '<h3 class="h6 txt-normal">',
+                            current.gsx$name.$t,
+                        '</h3>',
+                        '<div class="panel__foot">',
+                            current.gsx$specialty.$t + ', ',
+                            current.gsx$institution.$t,
+                        '</div>',
+                    '</div>',
+                '</article>'
+            ].join('');
+            html += person;
+        };
+
+        return html;
+    }
+
+    //AJAX spreadsheet data
+    (function(){
+        var url = "https://spreadsheets.google.com/feeds/list/1XDhHCs4h9-OqTHn8nh12Ti1cI--3oaJSOksOdZc7Zsw/WORKSHEET/public/full?alt=json";
+        var sheets = 6;
+        var html;
+
+        for (var i = 1; i < sheets; i++) {
+            var json = url.replace('WORKSHEET', ""+i+"");
+
+            $.getJSON(json).done(function(data) {
+                $(template(data)).prependTo($('#js-people'));
+            });
+        }
+
+    }());
+    </script>
+</main>
+<section class="bg-dark pad_t pad_b">
+    <div class="wrap wrap--large">
+        <h2 class="heading--section">Supported By</h2>
+        <div class="grid grid--wide">
+            <a class="grid__item third" href="http://www.uwhealth.org">
+                <img class="support-logo" src="http://cosmos.uwhealth.org/responsive/img/nav/build.125.logo_uwhealth_large.png" alt="UW Health">
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer role="contentinfo" class="bg-light txt-light">
+    <div class="wrap wrap--small">
+        <div class="grid">
+            <div class="grid__item half">
+                Copyright &copy; 2016 Problem Lists Plus
+            </div>
+            <div class="grid__item half">
+                <div class="align_right">
+                    Legal stuff
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
