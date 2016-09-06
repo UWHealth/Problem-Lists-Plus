@@ -1,5 +1,3 @@
-/*jshint strict:false */
-
 ;(function() {
 
 	var ParticleNetworkAnimation, PNA;
@@ -305,6 +303,8 @@
 	var returnRandomArrayitem = function(array) {
 		return array[Math.floor(Math.random()*array.length)];
 	};
+
+	//Initialize
 	if($('#particle-canvas')[0]){
     	var pna = new ParticleNetworkAnimation();	pna.init($('#particle-canvas')[0]);
 	}

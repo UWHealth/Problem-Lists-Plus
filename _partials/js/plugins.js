@@ -1,3 +1,5 @@
-"use strict";
+(function(){
+    "use strict";
 
-//= include "_particle.js"
+    //= include "_particle.js"
+}());
