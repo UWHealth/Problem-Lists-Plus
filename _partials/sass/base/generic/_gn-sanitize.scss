@@ -37,41 +37,12 @@ button {
 	-webkit-appearance: button; // iOS 8+
 }
 
-//details {
-//	display: block; // Edge 12+, Firefox 40+, Internet Explorer 11-, Windows Phone 8.1+
-//}
-
 html {
-	-ms-overflow-style: -ms-autohiding-scrollbar; // Edge 12+, Internet Explorer 11-
+	cursor: default;
 	overflow-y: scroll; // All browsers without overlaying scrollbars
 	-webkit-text-size-adjust: 100%; // iOS 8+
 	-ms-text-size-adjust: 100%;
 }
-
-input {
-	-webkit-border-radius: 0; // iOS 8+
-
-	&[type="button"], &[type="reset"], &[type="submit"] {
-		-webkit-appearance: button; // iOS 8+
-	}
-
-	&[type="number"] {
-		width: auto; // Firefox 36+
-	}
-
-	&[type="search"] {
-		-webkit-appearance: textfield; // Chrome 45+, Safari 9+
-
-		&::-webkit-search-cancel-button,
-		&::-webkit-search-decoration {
-			-webkit-appearance: none; // Chrome 45+, Safari 9+
-		}
-	}
-}
-
-// main {
-// 	display: block; // Android 4.3-, Internet Explorer 11-, Windows Phone 8.1+
-// }
 
 pre {
 	overflow: auto; // Internet Explorer 11-
@@ -79,18 +50,15 @@ pre {
 
 progress {
 	display: inline-block; // Internet Explorer 11-, Windows Phone 8.1+
+	vertical-align: baseline;
 }
-
-//small {
-//	font-size: $small-font-size; // All browsers
-//}
-
-//summary {
-//	display: block; // Firefox 40+, Internet Explorer 11-, Windows Phone 8.1+
-//}
 
 svg:not(:root) {
 	overflow: hidden; // Internet Explorer 11-
+}
+
+svg {
+	fill: currentColor;
 }
 
 template {
@@ -106,19 +74,16 @@ textarea {
 	display: none; // Internet Explorer 10-
 }
 
-/*
- * Universal inheritance
- */
+
+//
+// Universal inheritance
+//
 
 *,
 ::before,
 ::after {
 	box-sizing: inherit;
-}
-
-* {
-	font-size: inherit;
-	line-height: inherit;
+	background-repeat: no-repeat;
 }
 
 ::before,
@@ -128,10 +93,14 @@ textarea {
 }
 
 
+* {
+	line-height: inherit;
+}
 
-/*
- * Opinionated defaults
- */
+
+//
+// Opinionated defaults
+//
 
 // specify the border style and width of all elements
 
@@ -161,10 +130,21 @@ textarea {
 	text-rendering: $root-text-rendering;
 }
 
-// specify the text decoration of anchors
+
+// * 1. Remove the gray background on active links in IE 10.
+// * 2. Remove the gaps in underlines in iOS 8+ and Safari 8+.
 
 a {
 	text-decoration: $anchor-text-decoration;
+	background-color: transparent; /* 1 */
+	-webkit-text-decoration-skip: objects; /* 2 */
+}
+
+
+// * Remove the outline when hovering in all browsers (opinionated).
+
+a:hover {
+	outline-width: 0;
 }
 
 // specify the alignment of media elements
@@ -177,15 +157,6 @@ svg,
 video {
 	vertical-align: $media-element-vertical-align;
 }
-
-// specify the background color of form elements
-
-//button,
-//input,
-//select,
-//textarea {
-//	background-color: $form-element-background-color;
-//}
 
 // specify the inherited color and font of form elements
 
@@ -254,13 +225,6 @@ select {
 	}
 }
 
-// specify the border styling of tables
-
-// table {
-// 	border-collapse: $table-border-collapse;
-// 	border-spacing: $table-border-spacing;
-// }
-
 // specify the background color, font color and drop shadow of text selections
 
 ::-moz-selection {
@@ -303,4 +267,33 @@ select {
 	&:focus {
 		clip: auto;
 	}
+}
+
+
+// Remove the tapping delay on clickable elements (opinionated)
+// 1. Remove the tapping delay in IE 10.
+
+a,
+area,
+button,
+input,
+label,
+select,
+textarea,
+[tabindex] {
+	-ms-touch-action: manipulation; // 1
+	touch-action: manipulation;
+}
+
+
+// Change the display on visually hidden accessible elements (opinionated)
+
+[hidden][aria-hidden="false"] {
+	clip: rect(0, 0, 0, 0);
+	display: inherit;
+	position: absolute;
+}
+
+[hidden][aria-hidden="false"]:focus {
+	clip: auto;
 }

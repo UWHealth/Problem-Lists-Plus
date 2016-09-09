@@ -29,7 +29,7 @@
     transform-origin: bottom;
 }
 
-[data-jets]:not([data-jets="osteoporosis"]) {
+.grid__item:not([data-jets="osteoporosis"]) {
     opacity: .6;
     pointer-events: none;
     cursor: default;

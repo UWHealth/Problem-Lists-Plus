@@ -18,7 +18,7 @@
     <meta name="application-name" content="Problem Lists Plus"/>
     <title>Osteoperosis - Problem Lists Plus</title>
 
-    <link rel="stylesheet" href="css/main.css" media="screen">
+    <link rel="stylesheet" href="css/main.min.css" media="screen">
     <link rel="stylesheet" href="css/print.css" media="print">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,700" >
@@ -213,12 +213,16 @@
 </main>
 <div class="js-modal modal__bg js-modal--dismiss"></div>
 <div class="js-modal modal">
-    <div class="modal__body clearfix">
-        <h3 class="h5 heading--page">Disclaimer</h3>
-        <p class="clearfix">
-            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui.
-        </p>
-        <button class="js-modal--dismiss btn">Acknowledge</button>
+    <div class="modal__container">
+        <div class="modal__body">
+            <h3 class="h5 heading--page">Disclaimer</h3>
+            <p class="clearfix">
+                Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui.
+            </p>
+        </div>
+        <div class="modal__foot">
+            <button class="js-modal--dismiss btn">Acknowledge</button>
+        </div>
     </div>
 </div>
 <!--[if lte IE 8]>
@@ -252,8 +256,9 @@ End jQuery
     </div>
 </section>
 
-<footer role="contentinfo" class="bg-light txt-light">
-    <div class="wrap wrap--small">
+<footer role="contentinfo" class="bg-dark txt-light">
+    <div class="wrap wrap--large">
+        <hr>
         <div class="grid">
             <div class="grid__item half">
                 Copyright &copy; 2016 Problem Lists Plus

@@ -13,6 +13,7 @@ body {
 abbr[title],
 dfn[title] {
     cursor: help;
+    text-decoration: none;
 }
 
 u,
@@ -39,9 +40,12 @@ main,
 menu,
 nav,
 section,
-summary,
 hr {
 	display: block;
+}
+
+summary {
+    display: list-item;
 }
 
 a {
@@ -71,7 +75,7 @@ a {
 }
 
 hr {
-    height: 2px;
-    border-top: 2px solid color('bg', dark);
+    height: 1px;
+    border-top: 1px solid;
 	@include type-space(margin, 1 0 );
 }

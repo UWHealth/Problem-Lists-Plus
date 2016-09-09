@@ -1155,6 +1155,7 @@ body {
 abbr[title],
 dfn[title] {
   cursor: help;
+  text-decoration: none;
 }
 
 u,
@@ -1181,9 +1182,12 @@ main,
 menu,
 nav,
 section,
-summary,
 hr {
   display: block;
+}
+
+summary {
+  display: list-item;
 }
 
 a {
@@ -1209,8 +1213,8 @@ a:active, a:hover {
 }
 
 hr {
-  height: 2px;
-  border-top: 2px solid #ddd;
+  height: 1px;
+  border-top: 1px solid;
   margin: 24px 0;
   margin:  1.5rem 0;
 }
@@ -1229,30 +1233,10 @@ button {
 }
 
 html {
-  -ms-overflow-style: -ms-autohiding-scrollbar;
+  cursor: default;
   overflow-y: scroll;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-}
-
-input {
-  -webkit-border-radius: 0;
-}
-
-input[type="button"], input[type="reset"], input[type="submit"] {
-  -webkit-appearance: button;
-}
-
-input[type="number"] {
-  width: auto;
-}
-
-input[type="search"] {
-  -webkit-appearance: textfield;
-}
-
-input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
 }
 
 pre {
@@ -1261,10 +1245,15 @@ pre {
 
 progress {
   display: inline-block;
+  vertical-align: baseline;
 }
 
 svg:not(:root) {
   overflow: hidden;
+}
+
+svg {
+  fill: currentColor;
 }
 
 template {
@@ -1280,20 +1269,13 @@ textarea {
   display: none;
 }
 
-/*
- * Universal inheritance
- */
 *,
 ::before,
 ::after {
   -webkit-box-sizing: inherit;
      -moz-box-sizing: inherit;
           box-sizing: inherit;
-}
-
-* {
-  font-size: inherit;
-  line-height: inherit;
+  background-repeat: no-repeat;
 }
 
 ::before,
@@ -1302,9 +1284,10 @@ textarea {
   vertical-align: inherit;
 }
 
-/*
- * Opinionated defaults
- */
+* {
+  line-height: inherit;
+}
+
 *,
 ::before,
 ::after {
@@ -1331,6 +1314,14 @@ textarea {
 
 a {
   text-decoration: none;
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+}
+
+a:hover {
+  outline-width: 0;
 }
 
 audio,
@@ -1433,6 +1424,28 @@ select::-ms-value {
   clip: auto;
 }
 
+a,
+area,
+button,
+input,
+label,
+select,
+textarea,
+[tabindex] {
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+[hidden][aria-hidden="false"] {
+  clip: rect(0, 0, 0, 0);
+  display: inherit;
+  position: absolute;
+}
+
+[hidden][aria-hidden="false"]:focus {
+  clip: auto;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Merriweather", "Garamond", "Baskerville", "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
 }
@@ -1456,6 +1469,26 @@ table, p, address, pre {
           transition: all 300ms ease-in-out;
 }
 
+input {
+  -webkit-border-radius: 0;
+}
+
+input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+}
+
+input[type="number"] {
+  width: auto;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
 legend {
   display: table;
   white-space: normal;
@@ -1464,6 +1497,7 @@ legend {
 button,
 input {
   line-height: normal;
+  font-size: inherit;
 }
 
 button,
@@ -2295,7 +2329,7 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
           transform-origin: bottom;
 }
 
-[data-jets]:not([data-jets="osteoporosis"]) {
+.grid__item:not([data-jets="osteoporosis"]) {
   opacity: .6;
   pointer-events: none;
   cursor: default;
@@ -2458,21 +2492,52 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
   max-width: 940px;
   position: fixed;
   margin: auto;
-  top: 10%;
+  top: 0;
   z-index: 11;
   left: 0;
   right: 0;
   bottom: 0;
+  height: 100vh;
 }
 
-.modal__body {
+.modal__container {
+  height: 80vh;
+  width: 94%;
+  margin: auto;
+  -webkit-transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  top: 50%;
+  position: relative;
   background-color: #fff;
-  padding: 1.5rem;
   -webkit-box-shadow: 0 5px 25px -5px;
      -moz-box-shadow: 0 5px 25px -5px;
           box-shadow: 0 5px 25px -5px;
-  width: 94%;
-  margin: auto;
+  max-height: 480px;
+  max-height:  30rem;
+}
+
+.modal__body {
+  padding: 1.5rem;
+  padding-bottom: 72px;
+  padding-bottom:  4.5rem;
+  overflow: auto;
+  max-height: 100%;
+  margin-top: -1.5rem;
+  display: block;
+}
+
+.modal__foot {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+  height:  4.5rem;
+  padding: 12px 24px;
+  padding:  0.75rem 1.5rem;
+  background-color: #fff;
 }
 
 .modal__bg {

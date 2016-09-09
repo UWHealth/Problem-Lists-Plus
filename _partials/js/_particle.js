@@ -77,11 +77,11 @@
 
 	var ParticleNetwork = function(parent) {
 		this.options = {
-			velocity: 0.5, // the higher the faster
-			density: 20000, // the lower the denser
+			velocity: 0.4, // the higher the faster
+			density: 17500, // the lower the denser
 			netLineDistance: 225,
-			netLineColor: 'rgba(0,0,0,.25)',
-			particleColors: ['rgba(0,0,0,.1)', 'rgba(230,194,194,.15)', 'rgba(217,98,131,.25)' ]
+			netLineColor: '#B4ADAD',
+			particleColors: ['rgba(51,47,47,.1)', 'rgba(163,132,132,.15)', 'rgba(209,69,69,.25)' ]
 		};
 		this.canvas = parent.canvas;
 		this.ctx = parent.ctx;
@@ -117,7 +117,7 @@
 					clearInterval(me.createIntervalId);
 				}
 				counter++;
-			}.bind(this), 250);
+			}.bind(this), 100);
 		}
 		else {
 			// Create particle objects
@@ -202,7 +202,7 @@
 
 	ParticleNetwork.prototype.bindUiActions = function() {
 		// Mouse / touch event handling
-		this.spawnQuantity = 3;
+		this.spawnQuantity = 2;
 		this.mouseIsDown = false;
 		this.touchIsMoving = false;
 

@@ -1,5 +1,4 @@
 /*jshint node: true*/
-"use strict";
 
 var gulp		= require('gulp');
 
@@ -17,6 +16,7 @@ var rename      = require('gulp-rename');
 var sass		= require('gulp-sass');
 var size        = require('gulp-size');
 var uglify      = require('gulp-uglify');
+var uncss       = require('gulp-uncss');
 var yarg        = require('yargs').argv;
 
 
@@ -151,6 +151,12 @@ gulp.task('sass', function() {
         .pipe(cssnano({
             discardComments: {removeAll: false},
             zindex: false
+        }))
+        .pipe(uncss({
+            html: ['./*.html'],
+            report: true
+        }, function(err, output, report){
+            console.log(output);
         }))
         .pipe(rename({
             suffix: '.min'

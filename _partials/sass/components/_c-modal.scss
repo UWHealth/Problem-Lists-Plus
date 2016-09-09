@@ -2,19 +2,43 @@
 	max-width: 940px;
 	position: fixed;
 	margin: auto;
-	top: 10%;
+	top: 0;
 	z-index: 11;
 	left: 0;
 	right: 0;
 	bottom: 0;
+	height: 100vh;
+}
+
+.modal__container {
+	height: 80vh;
+    width: 94%;
+	margin: auto;
+	transform: translateY(-50%);
+	top: 50%;
+	position: relative;
+	background-color: #fff;
+	box-shadow: 0 5px 25px -5px;
+	@include type-space(max-height, 20);
 }
 
 .modal__body {
-	background-color: #fff;
 	padding: 1.5rem;
-	box-shadow: 0 5px 25px -5px;
-    width: 94%;
-    margin: auto;
+	@include type-space(padding-bottom, 3);
+	overflow: auto;
+	max-height: 100%;
+	margin-top: -1.5rem;
+	display: block;
+}
+
+.modal__foot {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right:0;
+	@include type-space(height, 3);
+	@include type-space(padding, .5 1);
+	background-color: #fff;
 }
 
 .modal__bg {
