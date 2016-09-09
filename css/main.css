@@ -2319,7 +2319,7 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
   background: #fff url("../img/icon_search.svg") center no-repeat;
 }
 
-[data-jets] {
+.search__item {
   opacity: 1;
   -webkit-transition: all .2s ease-out;
           transition: all .2s ease-out;
@@ -2329,7 +2329,7 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
           transform-origin: bottom;
 }
 
-.grid__item:not([data-jets="osteoporosis"]) {
+.search__item:not([data-jets="osteoporosis"]) {
   opacity: .6;
   pointer-events: none;
   cursor: default;

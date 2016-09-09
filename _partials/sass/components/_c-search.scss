@@ -23,13 +23,13 @@
     background: #fff url('../img/icon_search.svg') center no-repeat;
 }
 
-[data-jets] {
+.search__item {
     opacity: 1;
     transition: all .2s ease-out;
     transform-origin: bottom;
 }
 
-.grid__item:not([data-jets="osteoporosis"]) {
+.search__item:not([data-jets="osteoporosis"]) {
     opacity: .6;
     pointer-events: none;
     cursor: default;

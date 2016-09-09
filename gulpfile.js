@@ -152,12 +152,6 @@ gulp.task('sass', function() {
             discardComments: {removeAll: false},
             zindex: false
         }))
-        .pipe(uncss({
-            html: ['./*.html'],
-            report: true
-        }, function(err, output, report){
-            console.log(output);
-        }))
         .pipe(rename({
             suffix: '.min'
         }))
