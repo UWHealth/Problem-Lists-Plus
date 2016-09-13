@@ -1,0 +1,52 @@
+.tabs {
+    @include type-space(padding-bottom, 2);
+    display: flex;
+    justify-content: center;
+    vertical-align: top;
+    @include font-size($type-small-size, true);
+}
+
+.tab-section {
+    display: none;
+}
+
+.tabs__radio {
+    display: none;
+
+    &:checked:nth-of-type(1) ~ .tab-container .tab-section:nth-of-type(1),
+    &:checked:nth-of-type(2) ~ .tab-container .tab-section:nth-of-type(2) {
+        display: block;
+    }
+
+    &:checked:nth-of-type(2) ~ .tab-container .tabs__label:nth-of-type(2),
+    &:checked:nth-of-type(1) ~ .tab-container .tabs__label:nth-of-type(1) {
+        color: #fff;
+        background-color: color(links);
+        border-color: color(links);
+    }
+}
+
+.tabs__label {
+    color: color(links);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    cursor: pointer;
+    @include type-space(padding, .5 1 .5 1);
+    border: 2px solid;
+
+    &:hover {
+        color: color(links, light);
+        background-color: rgba(white, .5);
+    }
+
+}
+
+.tabs__icon {
+    display: inline-block;
+    @include type-space(padding-right, .25);
+
+    svg {
+        vertical-align: top;
+    }
+}

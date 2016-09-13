@@ -9,7 +9,7 @@
     <meta name="description" content="A problem-oriented medical mapping system">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Osteoperosis - Problem Lists Plus</title>
+    <title>Osteoperosis - Problem List Plus</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32">
@@ -35,14 +35,15 @@
             <a href="index.html" title="Go Home" class="nowrap">
                 <img src="img/icon_arrow.svg">
                 <div class="logo logo--top-nav align_middle">
-                    Problem Lists <span class="logo__plus">Plus</span>
+                    Problem List <span class="logo__plus">Plus</span>
                 </div>
             </a>
         </div>
         <div class="grid__item half">
             <div class="grid grid--right grid--middle">
                 <div class="grid__item auto"><a href="about.html">About</a></div>
-                <div class="grid__item auto"><a href="#"><span class="btn btn--small btn--dark">Register Now</span></a></div>
+                <div class="grid__item auto"><a href="contact.html">Contact</a></div>
+                <!-- <div class="grid__item auto"><a href="#"><span class="btn btn--small btn--dark">Register Now</span></a></div> -->
             </div>
         </div>
     </div>
@@ -64,10 +65,10 @@
 
 
 <main class="space_b_2 space_t_neg" role="main">
-    <article class="wrap wrap--small">
+    <section class="wrap wrap--small">
         <div class="grid grid--wide grid--stack">
-            <section class="grid__item two-fifths">
-                <table class="smalls_space_0">
+            <article class="grid__item two-fifths">
+                <table>
                     <thead>
                         <th>Lab Name</th>
                         <th><abbr title="Logical Observation Identifiers Names and Codes">LOINC</abbr> 1</th>
@@ -157,9 +158,9 @@
                         </tr>
                     </tbody>
                 </table>
-            </section>
-            <section class="grid__item three-fifths">
-                <table class="bigs_space_l_half smalls_space_0">
+            </article>
+            <article class="grid__item three-fifths">
+                <table class="table--fixed">
                     <thead>
                         <th>Pharm Subclass</th>
                         <th>Medication</th>
@@ -198,7 +199,7 @@
                                 <tr><td>estrogen	</td><td>4100</td></tr>
                         <tr>
                             <th rowspan="1" scope="row">Estrogen Combination</th>
-                            <td>conjugated estrogens/<wbr>bazedoxifine <small>[Duavee]	</td><td>1441391<td></tr>
+                            <td>conjugated estrogens/<wbr>bazedoxifine <small>[Duavee]	</td><td>1441391</td></tr>
                         <tr>
                             <th rowspan="2" scope="row">Calcium</th>
                                 <td>Calcium</td><td>1895</td>
@@ -210,12 +211,12 @@
                         </tr>
                     </tbody>
                 </table>
-            </section>
+            </article>
         </div>
-    </article>
+    </section>
 </main>
 <div class="js-modal modal__bg js-modal--dismiss"></div>
-<div class="js-modal modal">
+<section class="js-modal modal">
     <div class="modal__container">
         <div class="modal__body">
             <h3 class="h5 heading--page">Disclaimer</h3>
@@ -227,7 +228,7 @@
             <button class="js-modal--dismiss btn">Acknowledge</button>
         </div>
     </div>
-</div>
+</section>
 <!--[if lte IE 8]>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <![endif]-->
@@ -264,7 +265,7 @@ End jQuery
         <hr>
         <div class="grid">
             <div class="grid__item half">
-                Copyright &copy; 2016 Problem Lists Plus
+                Copyright &copy; 2016 Problem List Plus
             </div>
             <div class="grid__item half">
                 <div class="align_right">

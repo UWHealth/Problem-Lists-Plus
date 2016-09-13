@@ -20,10 +20,10 @@
 
 
 <main class="space_b_2 space_t_neg" role="main">
-    <article class="wrap wrap--small">
+    <section class="wrap wrap--small">
         <div class="grid grid--wide grid--stack">
-            <section class="grid__item two-fifths">
-                <table class="smalls_space_0">
+            <article class="grid__item two-fifths">
+                <table>
                     <thead>
                         <th>Lab Name</th>
                         <th><abbr title="Logical Observation Identifiers Names and Codes">LOINC</abbr> 1</th>
@@ -113,9 +113,9 @@
                         </tr>
                     </tbody>
                 </table>
-            </section>
-            <section class="grid__item three-fifths">
-                <table class="bigs_space_l_half smalls_space_0">
+            </article>
+            <article class="grid__item three-fifths">
+                <table class="table--fixed">
                     <thead>
                         <th>Pharm Subclass</th>
                         <th>Medication</th>
@@ -154,7 +154,7 @@
                                 <tr><td>estrogen	</td><td>4100</td></tr>
                         <tr>
                             <th rowspan="1" scope="row">Estrogen Combination</th>
-                            <td>conjugated estrogens/<wbr>bazedoxifine <small>[Duavee]	</td><td>1441391<td></tr>
+                            <td>conjugated estrogens/<wbr>bazedoxifine <small>[Duavee]	</td><td>1441391</td></tr>
                         <tr>
                             <th rowspan="2" scope="row">Calcium</th>
                                 <td>Calcium</td><td>1895</td>
@@ -166,12 +166,12 @@
                         </tr>
                     </tbody>
                 </table>
-            </section>
+            </article>
         </div>
-    </article>
+    </section>
 </main>
 <div class="js-modal modal__bg js-modal--dismiss"></div>
-<div class="js-modal modal">
+<section class="js-modal modal">
     <div class="modal__container">
         <div class="modal__body">
             <h3 class="h5 heading--page">Disclaimer</h3>
@@ -183,7 +183,7 @@
             <button class="js-modal--dismiss btn">Acknowledge</button>
         </div>
     </div>
-</div>
+</section>
 <!--@import scripts-->
 <script>
     $(function(){

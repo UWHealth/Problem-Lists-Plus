@@ -747,7 +747,7 @@ $font-warn: false;
     );
 	$sm-lh-lower-bound: min(
         baseline($smallest-size,
-            ($base-line-height - ($base-line-height / 3))
+            ($base-line-height - ($base-line-height / 2))
         ),
         $sm-lh-upper-bound - .5
     );

@@ -1583,29 +1583,24 @@ nav ul {
 }
 
 table {
-  margin-bottom: 24px;
-  margin-bottom:  1.5rem;
-  margin-left: -12px;
-  margin-left:  -0.75rem;
+  margin-bottom: 48px;
+  margin-bottom:  3rem;
   margin-top: -9px;
   margin-top:  -0.5625rem;
   border-spacing: 0.75rem 0.6875rem;
   width: 100%;
   background-color: transparent;
+  border-collapse: collapse;
 }
 
 th,
 td {
   border: 0 solid #6E6E6E;
-  padding: 6px 0 18px;
-  padding:  0.375rem 0 1.125rem;
+  border-top-width: 1px;
+  padding: 6px 6px 18px 6px;
+  padding:  0.375rem 0.375rem 1.125rem 0.375rem;
   vertical-align: top;
   text-align: left;
-}
-
-td,
-th {
-  border-top-width: 1px;
 }
 
 th {
@@ -1614,9 +1609,11 @@ th {
 
 thead th {
   vertical-align: bottom;
-  padding: 0;
-  color: #C41226;
   border-width: 0;
+  padding: 6px;
+  padding:  0.375rem;
+  color: #C41226;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -1639,7 +1636,7 @@ h2 {
 h3 {
   font-size: 43.904px;
   font-size: 2.744rem;
-  line-height: 1.09329;
+  line-height: 1.63994;
 }
 
 h4 {
@@ -1678,9 +1675,9 @@ The default font size for all typography is 16px with line-height of 24px(1.5). 
 */
 small {
   display: inline-block;
-  font-size: 12px;
-  font-size: 0.75rem;
-  line-height: 1.45833;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 1.34615;
 }
 
 b,
@@ -1877,13 +1874,13 @@ q:first-child {
   width: 50%;
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 660px) {
   .smalls-half {
     width: 50%;
   }
 }
 
-@media only screen and (min-width: 481px) and (max-width: 640px) {
+@media only screen and (min-width: 481px) and (max-width: 660px) {
   .add-on {
     width: 20%;
   }
@@ -1892,7 +1889,7 @@ q:first-child {
   }
 }
 
-@media only screen and (min-width: 641px) {
+@media only screen and (min-width: 661px) {
   .add-on {
     width: 16.66667%;
   }
@@ -1907,7 +1904,7 @@ q:first-child {
   }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 660px) {
   .grid--wide {
     margin-left:  -1.5rem;
   }
@@ -1920,7 +1917,7 @@ q:first-child {
   width: auto;
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 660px) {
   .grid--stack > .grid__item {
     width: 100%;
   }
@@ -2130,6 +2127,14 @@ _NOTE: Do not mistake this for true grid items. This should only be used for the
   font-weight: normal;
 }
 
+.txt-center {
+  text-align: center;
+}
+
+.table--fixed {
+  table-layout: fixed;
+}
+
 /* SG
 # Typography/Heading sizes
 
@@ -2140,7 +2145,7 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
 ```html_example
 <h1>Heading 1 <small>(66.85966px / 1.07688)</small></h1>
 <h2>Heading 2 <small>(61.4656px / 1.17139)</small></h2>
-<h3>Heading 3 <small>(43.904px / 1.09329)</small></h3>
+<h3>Heading 3 <small>(43.904px / 1.63994)</small></h3>
 <h4>Heading 4 <small>(31.36px / 1.53061)</small></h4>
 <h5>Heading 5 <small>(22.4px / 1.60714)</small></h5>
 <h6>Heading 6 <small>(18px / 24px)</small></h6>
@@ -2169,7 +2174,7 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
 .h3 {
   font-size: 43.904px;
   font-size: 2.744rem;
-  line-height: 1.09329;
+  line-height: 1.63994;
 }
 
 .h4 {
@@ -2212,10 +2217,10 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
   font-family: "clearsans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 660px) {
   .heading--page {
     font-size: 2.744rem;
-    line-height: 1.09329;
+    line-height: 1.63994;
   }
 }
 
@@ -2224,8 +2229,8 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
   position: relative;
   width: 100%;
   height: 40vh;
-  max-height: 480px;
-  max-height:  30rem;
+  max-height: 576px;
+  max-height:  36rem;
   -webkit-background-size: cover;
           background-size: cover;
   text-align: center;
@@ -2254,22 +2259,19 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
 .hero__body {
   display: table-row;
   vertical-align: middle;
-  padding-top: 48px;
-  padding-top:  3rem;
   max-width: 98%;
 }
 
 .hero__description {
   padding-top: 24px;
   padding-top:  1.5rem;
-  padding-bottom: 24px;
-  padding-bottom:  1.5rem;
   max-width: 576px;
   max-width:  36rem;
   width: 95%;
+  margin-bottom: 0;
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 660px) {
   .hero__description {
     font-size: 1rem;
     line-height: 1.5;
@@ -2330,7 +2332,7 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
 }
 
 .search__item:not([data-jets="osteoporosis"]) {
-  opacity: .6;
+  opacity: .5;
   pointer-events: none;
   cursor: default;
 }
@@ -2343,9 +2345,9 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
   color: #252D34;
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 660px) {
   .hero .logo--hero {
-    font-size: 8vw;
+    font-size: 8.5vw;
   }
 }
 
@@ -2550,6 +2552,76 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
   z-index: 10;
 }
 
+.tabs {
+  padding-bottom: 48px;
+  padding-bottom:  3rem;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  vertical-align: top;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 1.84615;
+}
+
+.tab-section {
+  display: none;
+}
+
+.tabs__radio {
+  display: none;
+}
+
+.tabs__radio:checked:nth-of-type(1) ~ .tab-container .tab-section:nth-of-type(1),
+.tabs__radio:checked:nth-of-type(2) ~ .tab-container .tab-section:nth-of-type(2) {
+  display: block;
+}
+
+.tabs__radio:checked:nth-of-type(2) ~ .tab-container .tabs__label:nth-of-type(2),
+.tabs__radio:checked:nth-of-type(1) ~ .tab-container .tabs__label:nth-of-type(1) {
+  color: #fff;
+  background-color: #C41226;
+  border-color: #C41226;
+}
+
+.tabs__label {
+  color: #C41226;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  padding: 12px 24px 12px 24px;
+  padding:  0.75rem 1.5rem 0.75rem 1.5rem;
+  border: 2px solid;
+}
+
+.tabs__label:hover {
+  color: #D63846;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.tabs__icon {
+  display: inline-block;
+  padding-right: 6px;
+  padding-right:  0.375rem;
+}
+
+.tabs__icon svg {
+  vertical-align: top;
+}
+
 .editor_content ul {
   list-style: bulleted;
   margin-left: 24px;
@@ -2699,7 +2771,7 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
   vertical-align: top;
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 660px) {
   .smalls_align_left {
     float: left !important;
     margin-right:  1.5rem;
@@ -2737,7 +2809,7 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
   }
 }
 
-@media only screen and (min-width: 641px) {
+@media only screen and (min-width: 661px) {
   .bigs_align_left {
     float: left !important;
     margin-right:  1.5rem;
@@ -3028,7 +3100,7 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
   padding-right:  3rem !important;
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 660px) {
   .smalls_space_0 {
     margin: 0 !important;
   }
@@ -3166,7 +3238,7 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
   }
 }
 
-@media only screen and (min-width: 641px) {
+@media only screen and (min-width: 661px) {
   .bigs_space_0 {
     margin: 0 !important;
   }
@@ -3458,7 +3530,7 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
   display: none !important;
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 660px) {
   .smalls_show {
     display: block !important;
   }
@@ -3473,7 +3545,7 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
   }
 }
 
-@media only screen and (min-width: 641px) {
+@media only screen and (min-width: 661px) {
   .bigs_show {
     display: block !important;
   }
@@ -3516,9 +3588,9 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
 }
 
 .txt_small {
-  font-size: 12px;
-  font-size: 0.75rem;
-  line-height: 2;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 1.84615;
 }
 
 .txt_space_reset {
@@ -3534,7 +3606,7 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
   font-family: "Merriweather", "Garamond", "Baskerville", "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 660px) {
   .smalls_txt_normal {
     font-weight: 400  !important;
   }
@@ -3557,8 +3629,8 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
     letter-spacing: 0  !important;
   }
   .smalls_txt_small {
-    font-size: 0.75rem;
-    line-height: 2;
+    font-size: 0.8125rem;
+    line-height: 1.84615;
   }
   .smalls_txt_space_reset {
     letter-spacing: normal  !important;
@@ -3572,7 +3644,7 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
   }
 }
 
-@media only screen and (min-width: 641px) {
+@media only screen and (min-width: 661px) {
   .bigs_txt_normal {
     font-weight: 400  !important;
   }
@@ -3595,8 +3667,8 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
     letter-spacing: 0  !important;
   }
   .bigs_txt_small {
-    font-size: 0.75rem;
-    line-height: 2;
+    font-size: 0.8125rem;
+    line-height: 1.84615;
   }
   .bigs_txt_space_reset {
     letter-spacing: normal  !important;

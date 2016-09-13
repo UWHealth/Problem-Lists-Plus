@@ -2,145 +2,92 @@
 <!--$logo-visibility = hidden-->
 <!--@import '_meta.kit'-->
 <!--@import '_head.kit'-->
-<header class="hero bg-dark" role="banner">
+
+<input type="radio" class="tabs__radio" name="tab-control" id="radio-maps" checked>
+<input type="radio" class="tabs__radio" name="tab-control" id="radio-meta">
+
+<header class="hero bg-dark tab-container" role="banner">
         <div style="position:absolute;top:0;left:0;right:0;bottom:0">
             <div id="particle-canvas"></div>
         </div>
         <div class="hero__body">
-            <div class="wrap wrap--large">
-                <h1 class="logo logo--hero z1">Problem Lists <span class="logo__plus">Plus</span></h1>
+            <div class="wrap wrap--large pad_t_2">
+                <h1 class="logo logo--hero z1">Problem List <span class="logo__plus">Plus</span></h1>
                 <p class="wrap hero__description z1">
-                    Cras mattis consectetur purus sit amet fermentum. Purus Fermentum Morbi leo risus, porta ac consectetur, vestibulum at eros.
-                    <a href="about.html">Learn More</a>
+                    Cras mattis consectetur purus sit amet fermentum. Purus Fermentum Morbi leo risus, porta ac consectetur.
+                    <a href="about.html">View Our Specialty Content Experts</a>
                 </p>
             </div>
         </div>
-
-    </div>
-
+        <div class="wrap wrap--large pad_0">
+            <nav class="tabs z1">
+                <label for="radio-maps" class="tabs__label" role="button">
+                    <span class="tabs__icon"><!--@import '../../img/icon_map.svg'--></span>
+                    Concept Maps
+                </label><!--
+                --><label for="radio-meta" class="tabs__label" role="button">
+                    <span class="tabs__icon"><!--@import '../../img/icon_metadata.svg'--></span>
+                    Reconciliation Metadata
+                </label>
+            </nav>
+        </div>
 </header>
 
 
-<section class="search wrap wrap--large">
-    <label for="js-search" class="visually_hidden">Search</label>
-    <input id="js-search" class="search__input pad full space_t_neg" autofocus placeholder="Find a Map"/>
-    <button class="search__button" tabindex="-1"> </button>
-</section>
-
-
-<main class="map-list space_b_2" role="main">
-    <div class="wrap wrap--small">
-        <div id="js-maps-list" class="grid grid--wide">
-
-            <article class="grid__item third smalls-half search__item">
-                <a href="osteoporosis.html" class="panel panel--link full space_b">
-                    <h5 class="h6 panel__body">Chronic Kidney Disease</h5>
-                </a>
-            </article>
-
-            <article class="grid__item third smalls-half search__item">
-                <a href="osteoporosis.html" class="panel panel--link full space_b">
-                    <h5 class="h6 panel__body">Coronary Artery Disease</h5>
-                </a>
-            </article>
-
-            <article class="grid__item third smalls-half search__item">
-                <a href="osteoporosis.html" class="panel panel--link full space_b">
-                    <h5 class="h6 panel__body">COPD</h5>
-                </a>
-            </article>
-
-            <article class="grid__item third smalls-half search__item">
-                <a href="osteoporosis.html" class="panel panel--link full space_b">
-                    <h5 class="h6 panel__body">Depression</h5>
-                </a>
-            </article>
-
-            <article class="grid__item third smalls-half search__item" data-jets="osteoporosis">
-                <a href="osteoporosis.html" class="panel panel--link full space_b">
-                    <h5 class="h6 panel__body">Osteoporosis</h5>
-                </a>
-            </article>
-
-            <article class="grid__item third smalls-half search__item">
-                <a href="osteoporosis.html" class="panel panel--link full space_b">
-                    <h5 class="h6 panel__body">Diabetes</h5>
-                </a>
-            </article>
-
-            <article class="grid__item third smalls-half search__item">
-                <a href="osteoporosis.html" class="panel panel--link full space_b">
-                    <h5 class="h6 panel__body">Lorem</h5>
-                </a>
-            </article>
-
-            <article class="grid__item third smalls-half search__item">
-                <a href="osteoporosis.html" class="panel panel--link full space_b">
-                    <h5 class="h6 panel__body">Ipsum Dolor</h5>
-                </a>
-            </article>
-
-            <article class="grid__item third smalls-half search__item">
-                <a href="osteoporosis.html" class="panel panel--link full space_b">
-                    <h5 class="h6 panel__body">Sollicitudin Fermentum</h5>
-                </a>
-            </article>
-
-            <article class="grid__item third smalls-half search__item">
-                <a href="osteoporosis.html" class="panel panel--link full space_b">
-                    <h5 class="h6 panel__body">Mattis</h5>
-                </a>
-            </article>
-
-            <article class="grid__item third smalls-half search__item">
-                <a href="osteoporosis.html" class="panel panel--link full space_b">
-                    <h5 class="h6 panel__body">Parturient Fermentum</h5>
-                </a>
-            </article>
-
-            <article class="grid__item third smalls-half search__item">
-                <a href="osteoporosis.html" class="panel panel--link full space_b">
-                    <h5 class="h6 panel__body">Inceptos Vestibulum Elit</h5>
-                </a>
-            </article>
-
-            <article class="grid__item third smalls-half search__item">
-                <a href="osteoporosis.html" class="panel panel--link full space_b">
-                    <h5 class="h6 panel__body">Ligula Consectetur</h5>
-                </a>
-            </article>
-
-            <article class="grid__item third smalls-half search__item">
-                <a href="osteoporosis.html" class="panel panel--link full space_b">
-                    <h5 class="h6 panel__body">Tellus</h5>
-                </a>
-            </article>
-
-            <article class="grid__item third smalls-half search__item">
-                <a href="osteoporosis.html" class="panel panel--link full space_b">
-                    <h5 class="h6 panel__body">Porta Cras</h5>
-                </a>
-            </article>
-
-            <article class="grid__item third smalls-half search__item">
-                <a href="osteoporosis.html" class="panel panel--link full space_b">
-                    <h5 class="h6 panel__body">Ornare</h5>
-                </a>
-            </article>
-
-            <article class="grid__item third smalls-half search__item">
-                <a href="osteoporosis.html" class="panel panel--link full space_b">
-                    <h5 class="h6 panel__body">Aenean Ornare</h5>
-                </a>
-            </article>
-
-            <article class="grid__item third smalls-half search__item">
-                <a href="osteoporosis.html" class="panel panel--link full space_b">
-                    <h5 class="h6 panel__body">Vehicula Elit</h5>
-                </a>
-            </article>
+<main class="map-list tab-container space_b_2" role="main">
+    <section id="maps" class="tab-section">
+        <div class="search wrap wrap--large">
+            <label for="js-search" class="visually_hidden">Search</label>
+            <input id="js-search" class="search__input pad full space_t_neg" autofocus placeholder="Find a Concept Map"/>
+            <button class="search__button" tabindex="-1"> </button>
         </div>
-    </div>
+        <div class="wrap wrap--small">
+            <div id="js-maps-list" class="grid grid--wide">
+
+                <article class="grid__item third smalls-half search__item">
+                    <a href="osteoporosis.html" class="panel panel--link full space_b">
+                        <h5 class="h6 panel__body">Chronic Kidney Disease</h5>
+                    </a>
+                </article>
+
+                <article class="grid__item third smalls-half search__item">
+                    <a href="osteoporosis.html" class="panel panel--link full space_b">
+                        <h5 class="h6 panel__body">Coronary Artery Disease</h5>
+                    </a>
+                </article>
+
+                <article class="grid__item third smalls-half search__item">
+                    <a href="osteoporosis.html" class="panel panel--link full space_b">
+                        <h5 class="h6 panel__body">COPD</h5>
+                    </a>
+                </article>
+
+                <article class="grid__item third smalls-half search__item">
+                    <a href="osteoporosis.html" class="panel panel--link full space_b">
+                        <h5 class="h6 panel__body">Depression</h5>
+                    </a>
+                </article>
+
+                <article class="grid__item third smalls-half search__item">
+                    <a href="osteoporosis.html" class="panel panel--link full space_b">
+                        <h5 class="h6 panel__body">Diabetes</h5>
+                    </a>
+                </article>
+
+                <article class="grid__item third smalls-half search__item" data-jets="osteoporosis">
+                    <a href="osteoporosis.html" class="panel panel--link full space_b">
+                        <h5 class="h6 panel__body">Osteoporosis</h5>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+    <section id="metadata" class="tab-section">
+        <div class="wrap wrap--small txt-center">
+            <h4 class="h5 pad_t_2">Coming Soon</h4>
+            <p><a href="contact.html">Contact Us</a> if you'd like to learn more about Reconciliation Metadata.</p>
+        </div>
+    </section>
 </main>
 
 <!--@import 'scripts.kit'-->
