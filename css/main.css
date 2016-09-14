@@ -1624,7 +1624,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 66.85966px;
   font-size: 4.17873rem;
-  line-height: 1.07688;
+  line-height: 1.43584;
 }
 
 h2 {
@@ -1677,7 +1677,7 @@ small {
   display: inline-block;
   font-size: 13px;
   font-size: 0.8125rem;
-  line-height: 1.34615;
+  line-height: 1.84615;
 }
 
 b,
@@ -2143,7 +2143,7 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
 **Heading tags should be used in a hierarchical manner**, appropriate for the page, and not used for their size. To override a heading size, use a class with the corresponding heading name. See the example below.
 
 ```html_example
-<h1>Heading 1 <small>(66.85966px / 1.07688)</small></h1>
+<h1>Heading 1 <small>(66.85966px / 1.43584)</small></h1>
 <h2>Heading 2 <small>(61.4656px / 1.17139)</small></h2>
 <h3>Heading 3 <small>(43.904px / 1.63994)</small></h3>
 <h4>Heading 4 <small>(31.36px / 1.53061)</small></h4>
@@ -2162,7 +2162,7 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
 .h1 {
   font-size: 66.85966px;
   font-size: 4.17873rem;
-  line-height: 1.07688;
+  line-height: 1.43584;
 }
 
 .h2 {

@@ -39,7 +39,7 @@
 	margin-bottom: 0;
 
     @include mq(smalls) {
-        @include font-size($base-font-size, true);
+        @include font-size($base-font-size, $base-line-height);
     }
 }
 

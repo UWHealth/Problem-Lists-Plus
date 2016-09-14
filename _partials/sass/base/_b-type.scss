@@ -62,7 +62,7 @@ p {
 
 small {
 	display: inline-block; //allows for own line-height
-	@include font-size($type-small-size, $small-lh);
+	@include font-size($type-small-size, true);
 }
 
 
