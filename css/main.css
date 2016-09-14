@@ -1677,7 +1677,7 @@ small {
   display: inline-block;
   font-size: 13px;
   font-size: 0.8125rem;
-  line-height: 1.84615;
+  line-height: 1.34615;
 }
 
 b,
@@ -2597,6 +2597,10 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-flex: .25;
+     -moz-box-flex: .25;
+      -ms-flex: .25 0 0%;
+          flex: .25 0 0%;
   -webkit-box-pack: center;
      -moz-box-pack: center;
       -ms-flex-pack: center;

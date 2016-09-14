@@ -30,7 +30,8 @@
     color: color(links);
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    flex: .25 0 0%;
+	justify-content: center;
     cursor: pointer;
     @include type-space(padding, .5 1 .5 1);
     border: 2px solid;
