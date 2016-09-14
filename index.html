@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="css/main.min.css" media="screen">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,700" >
+    <link rel="stylesheet" href="css/print.css" media="print">
 </head>
 <body class="">
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
@@ -59,12 +60,12 @@
             <div class="wrap wrap--large pad_t_2">
                 <h1 class="logo logo--hero z1">Problem List <span class="logo__plus">Plus</span></h1>
                 <p class="wrap hero__description z1">
-                    Cras mattis consectetur purus sit amet fermentum. Purus Fermentum Morbi leo risus, porta ac consectetur.
+                    Metadata for problems for use with aggregate display tools and with clinical decision support&nbsp;(CDS).<br>
                     <a href="about.html">View Our Specialty Content Experts</a>
                 </p>
             </div>
         </div>
-        <div class="wrap wrap--large pad_0">
+        <div class="wrap wrap--small">
             <nav class="tabs z1">
                 <label for="radio-maps" class="tabs__label" role="button">
                     <span class="tabs__icon"><svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
@@ -72,15 +73,15 @@
     <path d="M0 0h24v24H0z" fill="none"/>
 </svg>
 </span>
-                    Concept Maps
-                </label><!--
-                --><label for="radio-meta" class="tabs__label" role="button">
+                    Problem Concept Maps
+                </label>
+                <label for="radio-meta" class="tabs__label" role="button">
                     <span class="tabs__icon"><svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
 </svg>
 </span>
-                    Reconciliation Metadata
+                    Reconciliation/&zwnj;Cleanup Metadata
                 </label>
             </nav>
         </div>
@@ -121,11 +122,11 @@
                     </a>
                 </article>
 
-                <article class="grid__item third smalls-half search__item">
+                <!-- <article class="grid__item third smalls-half search__item">
                     <a href="osteoporosis.html" class="panel panel--link full space_b">
                         <h5 class="h6 panel__body">Diabetes</h5>
                     </a>
-                </article>
+                </article> -->
 
                 <article class="grid__item third smalls-half search__item" data-jets="osteoporosis">
                     <a href="osteoporosis.html" class="panel panel--link full space_b">
@@ -137,7 +138,8 @@
     </section>
     <section id="metadata" class="tab-section">
         <div class="wrap wrap--small txt-center">
-            <h4 class="h5 pad_t_2">Coming Soon</h4>
+            <h4 class="heading--page pad_t_2">Coming Soon</h4>
+            <br>
             <p><a href="contact.html">Contact Us</a> if you'd like to learn more about Reconciliation Metadata.</p>
         </div>
     </section>
@@ -166,9 +168,9 @@ End jQuery
     });
 </script>
 
-<section class="bg-dark pad_t pad_b">
-    <div class="wrap wrap--large">
-        <h2 class="heading--section">Supported By</h2>
+<section class="bg-dark pad_t pad_b" role="contentinfo">
+    <div class="wrap wrap--small">
+        <h2 class="heading--section txt-center txt-light">Supported By</h2>
         <div class="grid grid--wide">
             <a class="grid__item third" href="http://www.uwhealth.org">
                 <img class="support-logo" src="http://cosmos.uwhealth.org/responsive/img/nav/build.125.logo_uwhealth_large.png" alt="UW Health">
@@ -178,9 +180,12 @@ End jQuery
 </section>
 
 <footer role="contentinfo" class="bg-dark txt-light">
-    <div class="wrap wrap--large">
+    <div class="wrap wrap--small">
         <hr>
-        <div class="grid">
+        <p class="txt-center">
+            Copyright &copy; 2016 Problem List Plus
+        </p>
+        <!-- <div class="grid">
             <div class="grid__item half">
                 Copyright &copy; 2016 Problem List Plus
             </div>
@@ -189,7 +194,7 @@ End jQuery
                     Legal stuff
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </footer>
 </body>

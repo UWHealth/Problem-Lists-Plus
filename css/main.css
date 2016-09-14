@@ -484,7 +484,7 @@ Uses `$$scale-ratio` to create font sizes for headings starting from the `$$base
 
 ##### `$$scale-ratio`
 ###### Numeric (float)
-Used for `$$auto-scale-type` and for `modular-scale()`.
+Used for to determine `modular-scale()` multiple.
 
 ##### `$$rem-px-fallback`
 ###### Boolean
@@ -1147,7 +1147,6 @@ body {
 }
 
 body {
-  font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -1215,7 +1214,6 @@ a:active, a:hover {
 hr {
   height: 1px;
   border-top: 1px solid;
-  margin: 24px 0;
   margin:  1.5rem 0;
 }
 
@@ -1451,7 +1449,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 table, p, address, pre {
-  margin: 0 0 24px;
   margin:  0 0 1.5rem;
 }
 
@@ -1568,7 +1565,6 @@ ul,
 ol,
 dl,
 menu {
-  margin: 0 0 24px 24px;
   margin:  0 0 1.5rem 1.5rem;
 }
 
@@ -1583,9 +1579,7 @@ nav ul {
 }
 
 table {
-  margin-bottom: 48px;
   margin-bottom:  3rem;
-  margin-top: -9px;
   margin-top:  -0.5625rem;
   border-spacing: 0.75rem 0.6875rem;
   width: 100%;
@@ -1597,7 +1591,6 @@ th,
 td {
   border: 0 solid #6E6E6E;
   border-top-width: 1px;
-  padding: 6px 6px 18px 6px;
   padding:  0.375rem 0.375rem 1.125rem 0.375rem;
   vertical-align: top;
   text-align: left;
@@ -1610,55 +1603,46 @@ th {
 thead th {
   vertical-align: bottom;
   border-width: 0;
-  padding: 6px;
   padding:  0.375rem;
   color: #C41226;
   background-color: rgba(255, 255, 255, 0.5);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 24px;
   margin-bottom:  1.5rem;
 }
 
 h1 {
-  font-size: 66.85966px;
   font-size: 4.17873rem;
   line-height: 1.43584;
 }
 
 h2 {
-  font-size: 61.4656px;
   font-size: 3.8416rem;
   line-height: 1.17139;
 }
 
 h3 {
-  font-size: 43.904px;
   font-size: 2.744rem;
   line-height: 1.63994;
 }
 
 h4 {
-  font-size: 31.36px;
   font-size: 1.96rem;
   line-height: 1.53061;
 }
 
 h5 {
-  font-size: 22.4px;
   font-size: 1.4rem;
   line-height: 1.60714;
 }
 
 h6 {
-  font-size: 18px;
   font-size: 1.125rem;
   line-height: 1.33333;
 }
 
 h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
-  margin-top: -24px;
   margin-top:  -1.5rem;
 }
 
@@ -1675,7 +1659,6 @@ The default font size for all typography is 16px with line-height of 24px(1.5). 
 */
 small {
   display: inline-block;
-  font-size: 13px;
   font-size: 0.8125rem;
   line-height: 1.34615;
 }
@@ -1709,6 +1692,7 @@ sub {
 }
 
 abbr {
+  font-size: 97%;
   letter-spacing: 0.05em;
 }
 
@@ -1726,7 +1710,6 @@ blockquote {
 }
 
 blockquote {
-  margin: 0 0 24px 24px;
   margin:  0 0 1.5rem 1.5rem;
   quotes: '“' '”';
 }
@@ -1786,7 +1769,6 @@ q:first-child {
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-left: -24px;
   margin-left:  -1.5rem;
   letter-spacing: -0.43em;
 }
@@ -1798,7 +1780,6 @@ q:first-child {
 
 .grid__item {
   display: inline-block;
-  padding-left: 24px;
   padding-left:  1.5rem;
   vertical-align: top;
   width: 100%;
@@ -1827,22 +1808,18 @@ q:first-child {
 }
 
 .grid--narrow {
-  margin-left: -12px;
   margin-left:  -0.75rem;
 }
 
 .grid--narrow > .grid__item {
-  padding-left: 12px;
   padding-left:  0.75rem;
 }
 
 .grid--wide {
-  margin-left: -48px;
   margin-left:  -3rem;
 }
 
 .grid--wide > .grid__item {
-  padding-left: 48px;
   padding-left:  3rem;
 }
 
@@ -1930,10 +1907,8 @@ q:first-child {
 }
 
 .wrap--small {
-  padding: 24px 0;
   padding:  1.5rem 0;
-  max-width: 924px;
-  max-width: 57.75rem;
+  max-width: 62.75rem;
   width: 90%;
 }
 
@@ -1944,17 +1919,14 @@ q:first-child {
 }
 
 .wrap--large {
-  padding: 24px 0;
   padding:  1.5rem 0;
-  max-width: 1008px;
-  max-width: 63rem;
+  max-width: 67.5rem;
   width: 95%;
 }
 
 .top-nav {
   position: relative;
   z-index: 1;
-  padding: 8.004px 12px;
   padding:  0.50025rem 0.75rem;
   opacity: .6;
   background-color: #fff;
@@ -1971,7 +1943,6 @@ q:first-child {
 
 .top-nav a {
   display: inline-block;
-  height: 24px;
   height:  1.5rem;
   line-height: 1;
   text-align: center;
@@ -2013,12 +1984,10 @@ Isolates an image from text wrapping underneath. Useful for creating an associat
 
 .isolate {
   width: 100%;
-  margin-bottom: 24px;
   margin-bottom:  1.5rem;
 }
 
 .isolate_body {
-  padding-left: 12px;
   padding-left:  0.75rem;
 }
 
@@ -2076,7 +2045,6 @@ _NOTE: Do not mistake this for true grid items. This should only be used for the
   min-width: 100%;
   display: table;
   width: 100%;
-  margin-bottom: 24px;
   margin-bottom:  1.5rem;
 }
 
@@ -2094,7 +2062,6 @@ _NOTE: Do not mistake this for true grid items. This should only be used for the
 }
 
 .arrange_body {
-  padding-left: 12px;
   padding-left:  0.75rem;
 }
 
@@ -2131,6 +2098,11 @@ _NOTE: Do not mistake this for true grid items. This should only be used for the
   text-align: center;
 }
 
+.txt-small {
+  font-size: 0.8125rem;
+  line-height: 1.34615;
+}
+
 .table--fixed {
   table-layout: fixed;
 }
@@ -2155,61 +2127,51 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
 ```
 */
 .h1, .h2, .h3, .h4, .h5, .hero__description, .h6 {
-  margin-bottom: 24px;
   margin-bottom:  1.5rem;
 }
 
 .h1 {
-  font-size: 66.85966px;
   font-size: 4.17873rem;
   line-height: 1.43584;
 }
 
 .h2 {
-  font-size: 61.4656px;
   font-size: 3.8416rem;
   line-height: 1.17139;
 }
 
 .h3 {
-  font-size: 43.904px;
   font-size: 2.744rem;
   line-height: 1.63994;
 }
 
 .h4 {
-  font-size: 31.36px;
   font-size: 1.96rem;
   line-height: 1.53061;
 }
 
 .h5, .hero__description {
-  font-size: 22.4px;
   font-size: 1.4rem;
   line-height: 1.60714;
 }
 
 .h6 {
-  font-size: 18px;
   font-size: 1.125rem;
   line-height: 1.33333;
 }
 
 .h1 + p, .h2 + p, .h3 + p, .h4 + p, .h5 + p, .h6 + p {
-  margin-top: -24px;
   margin-top:  -1.5rem;
 }
 
 .heading--section {
   color: #6E6E6E;
-  font-size: 31.36px;
   font-size: 1.96rem;
   line-height: 1.53061;
   font-weight: normal;
 }
 
 .heading--page {
-  font-size: 61.4656px;
   font-size: 3.8416rem;
   line-height: 1.17139;
   color: #C41226;
@@ -2229,7 +2191,6 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
   position: relative;
   width: 100%;
   height: 40vh;
-  max-height: 576px;
   max-height:  36rem;
   -webkit-background-size: cover;
           background-size: cover;
@@ -2247,9 +2208,7 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
   display: block;
   border-bottom: 1px solid #C41226;
   width: 25%;
-  height: 12px;
   height:  0.75rem;
-  max-width: 120px;
   max-width:  7.5rem;
   -webkit-transition: width 100ms cubic-bezier(0.2, -0.26, 0.22, 1.1);
           transition: width 100ms cubic-bezier(0.2, -0.26, 0.22, 1.1);
@@ -2263,9 +2222,7 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
 }
 
 .hero__description {
-  padding-top: 24px;
   padding-top:  1.5rem;
-  max-width: 576px;
   max-width:  36rem;
   width: 95%;
   margin-bottom: 0;
@@ -2286,7 +2243,6 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
 
 .search {
   position: relative;
-  margin-top: -36px;
   margin-top:  -2.25rem;
 }
 
@@ -2308,15 +2264,10 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
 
 .search__button {
   position: absolute;
-  top: 18px;
   top:  1.125rem;
-  right: 18px;
   right:  1.125rem;
-  width: 36px;
   width:  2.25rem;
-  height: 36px;
   height:  2.25rem;
-  padding: 12px;
   padding:  0.75rem;
   background: #fff url("../img/icon_search.svg") center no-repeat;
 }
@@ -2347,7 +2298,7 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
 
 @media only screen and (max-width: 660px) {
   .hero .logo--hero {
-    font-size: 8.5vw;
+    font-size: 9.5vw;
   }
 }
 
@@ -2386,7 +2337,6 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
 
 .btn {
   display: inline-block;
-  padding: 18px;
   padding:  1.125rem;
   color: #fff;
   line-height: 1;
@@ -2400,6 +2350,7 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
   -webkit-box-shadow: 0 2px 20px rgba(196, 18, 38, 0.05), 0 2px 15px 1px rgba(163, 42, 55, 0.3), 0 1px 2px 1px rgba(73, 8, 16, 0.1);
      -moz-box-shadow: 0 2px 20px rgba(196, 18, 38, 0.05), 0 2px 15px 1px rgba(163, 42, 55, 0.3), 0 1px 2px 1px rgba(73, 8, 16, 0.1);
           box-shadow: 0 2px 20px rgba(196, 18, 38, 0.05), 0 2px 15px 1px rgba(163, 42, 55, 0.3), 0 1px 2px 1px rgba(73, 8, 16, 0.1);
+  outline: none;
 }
 
 .btn:active {
@@ -2410,10 +2361,13 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
           box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.5), 0 0 3px rgba(196, 18, 38, 0.3);
 }
 
+.btn__hidden-text {
+  display: block;
+  opacity: .7;
+}
+
 .btn--small {
-  padding-top: 6px;
   padding-top:  0.375rem;
-  padding-bottom: 6px;
   padding-bottom:  0.375rem;
 }
 
@@ -2427,8 +2381,19 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
   background-color: #A32A37;
 }
 
+.btn--disabled {
+  cursor: default;
+}
+
+.btn--disabled:active {
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+  color: #fff;
+  opacity: .9;
+}
+
 .panel {
-  padding: 12px;
   padding:  0.75rem;
   background-color: rgba(255, 255, 255, 0.8);
 }
@@ -2438,9 +2403,7 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
   display: block;
   border-bottom: 1px solid #6E6E6E;
   width: 25%;
-  height: 12px;
   height:  0.75rem;
-  max-width: 120px;
   max-width:  7.5rem;
   -webkit-transition: width 100ms cubic-bezier(0.2, -0.26, 0.22, 1.1);
           transition: width 100ms cubic-bezier(0.2, -0.26, 0.22, 1.1);
@@ -2516,13 +2479,11 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
   -webkit-box-shadow: 0 5px 25px -5px;
      -moz-box-shadow: 0 5px 25px -5px;
           box-shadow: 0 5px 25px -5px;
-  max-height: 480px;
   max-height:  30rem;
 }
 
 .modal__body {
   padding: 1.5rem;
-  padding-bottom: 72px;
   padding-bottom:  4.5rem;
   overflow: auto;
   max-height: 100%;
@@ -2535,9 +2496,7 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
   bottom: 0;
   left: 0;
   right: 0;
-  height: 72px;
   height:  4.5rem;
-  padding: 12px 24px;
   padding:  0.75rem 1.5rem;
   background-color: #fff;
 }
@@ -2553,8 +2512,6 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
 }
 
 .tabs {
-  padding-bottom: 48px;
-  padding-bottom:  3rem;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -2564,7 +2521,7 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
       -ms-flex-pack: center;
           justify-content: center;
   vertical-align: top;
-  font-size: 13px;
+  padding-bottom:  3rem;
   font-size: 0.8125rem;
   line-height: 1.84615;
 }
@@ -2584,31 +2541,35 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
 
 .tabs__radio:checked:nth-of-type(2) ~ .tab-container .tabs__label:nth-of-type(2),
 .tabs__radio:checked:nth-of-type(1) ~ .tab-container .tabs__label:nth-of-type(1) {
-  color: #fff;
-  background-color: #C41226;
   border-color: #C41226;
+  background-color: #C41226;
+  color: #fff;
 }
 
 .tabs__label {
-  color: #C41226;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-flex: .25;
-     -moz-box-flex: .25;
-      -ms-flex: .25 0 0%;
-          flex: .25 0 0%;
+  -webkit-box-flex: 0.25;
+     -moz-box-flex: 0.25;
+      -ms-flex: 0.25 1 17.1875rem;
+          flex: 0.25 1 17.1875rem;
   -webkit-box-pack: center;
      -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
-  padding: 12px 24px 12px 24px;
-  padding:  0.75rem 1.5rem 0.75rem 1.5rem;
   border: 2px solid;
+  padding:  0.75rem 1.125rem 0.75rem 1.125rem;
+  max-width: 20rem;
+  color: #C41226;
 }
 
 .tabs__label:hover {
@@ -2618,7 +2579,6 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
 
 .tabs__icon {
   display: inline-block;
-  padding-right: 6px;
   padding-right:  0.375rem;
 }
 
@@ -2628,7 +2588,6 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
 
 .editor_content ul {
   list-style: bulleted;
-  margin-left: 24px;
   margin-left:  1.5rem;
 }
 
@@ -2730,13 +2689,11 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
 
 .align_left {
   float: left !important;
-  margin-right: 24px;
   margin-right:  1.5rem;
 }
 
 .align_right {
   float: right !important;
-  margin-left: 24px;
   margin-left:  1.5rem;
 }
 
@@ -2910,102 +2867,82 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
 }
 
 .space {
-  margin: 24px !important;
   margin:  1.5rem !important;
 }
 
 .space_t, .space_v {
-  margin-top: 24px !important;
   margin-top:  1.5rem !important;
 }
 
 .space_l, .space_h {
-  margin-left: 24px !important;
   margin-left:  1.5rem !important;
 }
 
 .space_b, .space_v {
-  margin-bottom: 24px !important;
   margin-bottom:  1.5rem !important;
 }
 
 .space_r, .space_h {
-  margin-right: 24px !important;
   margin-right:  1.5rem !important;
 }
 
 .space_half {
-  margin: 12px !important;
   margin:  0.75rem !important;
 }
 
 .space_t_half, .space_v_half {
-  margin-top: 12px !important;
   margin-top:  0.75rem !important;
 }
 
 .space_l_half, .space_h_half {
-  margin-left: 12px !important;
   margin-left:  0.75rem !important;
 }
 
 .space_b_half, .space_v_half {
-  margin-bottom: 12px !important;
   margin-bottom:  0.75rem !important;
 }
 
 .space_r_half, .space_h_half {
-  margin-right: 12px !important;
   margin-right:  0.75rem !important;
 }
 
 .space_neg {
-  margin: -24px !important;
   margin:  -1.5rem !important;
 }
 
 .space_t_neg, .space_v_neg {
-  margin-top: -24px !important;
   margin-top:  -1.5rem !important;
 }
 
 .space_l_neg, .space_h_neg {
-  margin-left: -24px !important;
   margin-left:  -1.5rem !important;
 }
 
 .space_b_neg, .space_v_neg {
-  margin-bottom: -24px !important;
   margin-bottom:  -1.5rem !important;
 }
 
 .space_r_neg, .space_h_neg {
-  margin-right: -24px !important;
   margin-right:  -1.5rem !important;
 }
 
 .space_2 {
-  margin: 48px !important;
   margin:  3rem !important;
 }
 
 .space_t_2, .space_v_2 {
-  margin-top: 48px !important;
   margin-top:  3rem !important;
 }
 
 .space_l_2, .space_h_2 {
-  margin-left: 48px !important;
   margin-left:  3rem !important;
 }
 
 .space_b_2, .space_v_2 {
-  margin-bottom: 48px !important;
   margin-bottom:  3rem !important;
 }
 
 .space_r_2, .space_h_2 {
-  margin-right: 48px !important;
   margin-right:  3rem !important;
 }
 
@@ -3030,77 +2967,62 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
 }
 
 .pad {
-  padding: 24px !important;
   padding:  1.5rem !important;
 }
 
 .pad_t, .pad_v {
-  padding-top: 24px !important;
   padding-top:  1.5rem !important;
 }
 
 .pad_l, .pad_h {
-  padding-left: 24px !important;
   padding-left:  1.5rem !important;
 }
 
 .pad_b, .pad_v {
-  padding-bottom: 24px !important;
   padding-bottom:  1.5rem !important;
 }
 
 .pad_r, .pad_h {
-  padding-right: 24px !important;
   padding-right:  1.5rem !important;
 }
 
 .pad_half {
-  padding: 12px !important;
   padding:  0.75rem !important;
 }
 
 .pad_t_half, .pad_v_half {
-  padding-top: 12px !important;
   padding-top:  0.75rem !important;
 }
 
 .pad_l_half, .pad_h_half {
-  padding-left: 12px !important;
   padding-left:  0.75rem !important;
 }
 
 .pad_b_half, .pad_v_half {
-  padding-bottom: 12px !important;
   padding-bottom:  0.75rem !important;
 }
 
 .pad_r_half, .pad_h_half {
-  padding-right: 12px !important;
   padding-right:  0.75rem !important;
 }
 
 .pad_2 {
-  padding: 48px !important;
   padding:  3rem !important;
 }
 
 .pad_t_2, .pad_v_2 {
-  padding-top: 48px !important;
   padding-top:  3rem !important;
 }
 
 .pad_l_2, .pad_h_2 {
-  padding-left: 48px !important;
   padding-left:  3rem !important;
 }
 
 .pad_b_2, .pad_v_2 {
-  padding-bottom: 48px !important;
   padding-bottom:  3rem !important;
 }
 
 .pad_r_2, .pad_h_2 {
-  padding-right: 48px !important;
   padding-right:  3rem !important;
 }
 
@@ -3592,7 +3514,6 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
 }
 
 .txt_small {
-  font-size: 13px;
   font-size: 0.8125rem;
   line-height: 1.84615;
 }

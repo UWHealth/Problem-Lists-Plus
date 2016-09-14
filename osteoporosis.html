@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="css/main.min.css" media="screen">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,700" >
+    <link rel="stylesheet" href="css/print.css" media="print">
 </head>
 <body class="">
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
@@ -60,7 +61,7 @@
 
 
 <section class="wrap wrap--large pad_t_half space_t_neg">
-    <a href="" class="h6 btn btn--large align_right space_t_neg nowrap">Download Map</a>
+    <a href="#" class="h6 btn btn--large btn--disabled align_right space_t_neg nowrap contain">Download Map<span class="btn__hidden-text txt-small">Coming Soon</span></a>
 </section>
 
 
@@ -249,9 +250,9 @@ End jQuery
         });
     });
 </script>
-<section class="bg-dark pad_t pad_b">
-    <div class="wrap wrap--large">
-        <h2 class="heading--section">Supported By</h2>
+<section class="bg-dark pad_t pad_b" role="contentinfo">
+    <div class="wrap wrap--small">
+        <h2 class="heading--section txt-center txt-light">Supported By</h2>
         <div class="grid grid--wide">
             <a class="grid__item third" href="http://www.uwhealth.org">
                 <img class="support-logo" src="http://cosmos.uwhealth.org/responsive/img/nav/build.125.logo_uwhealth_large.png" alt="UW Health">
@@ -261,9 +262,12 @@ End jQuery
 </section>
 
 <footer role="contentinfo" class="bg-dark txt-light">
-    <div class="wrap wrap--large">
+    <div class="wrap wrap--small">
         <hr>
-        <div class="grid">
+        <p class="txt-center">
+            Copyright &copy; 2016 Problem List Plus
+        </p>
+        <!-- <div class="grid">
             <div class="grid__item half">
                 Copyright &copy; 2016 Problem List Plus
             </div>
@@ -272,7 +276,7 @@ End jQuery
                     Legal stuff
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </footer>
 </body>

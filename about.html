@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="css/main.min.css" media="screen">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,700" >
+    <link rel="stylesheet" href="css/print.css" media="print">
 </head>
 <body class="">
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
@@ -49,12 +50,15 @@
     </div>
 </nav>
     <div class="hero__body">
-        <div class="wrap wrap--small">
+        <div class="wrap wrap--large">
             <h1 class="heading--page">About Problem List Plus</h1>
             <div class="content pad_t pad_b">
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum.</p>
+                <p>The <em>Problem List Plus</em> site will provide metadata for problems for use with aggregate display tools and with clinical decision support (<abbr>CDS</abbr>). The metadata content is created by experts at academic or large community hospitals. The metadata content uses publically available vocabularies such as <abbr title="Systematized Nomenclature of Medicine">SNOMED</abbr>, R<sub>x</sub>&nbsp;Norm and <abbr title="Logical Observation Identifiers Names and Codes">LOINC</abbr>. The content is curated at the <a href="http://www.wisc.edu">University of Wisconsin</a>.</p>
+                <p>
+                <em>Problem Concept Maps</em> are being developed to drive aggregate data displays from the problem list. The first maps include lab and medications that are relevant to a particular problem. Later maps will include imaging studies, procedures and documents that should be included in a problem based aggregate display.</p>
+                <p>
+                <em>Reconciliation/Cleanup Categories</em> are being created for common problems. Vendors can create software that utilizes these category metadata to drive <abbr title="Clinical decision support">CDS</abbr> tools for managing the problem list.</p>
 
-                <p class="pad_b">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas faucibus mollis interdum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
             </div>
         </div>
     </div>
@@ -123,9 +127,9 @@ End jQuery
     }());
     </script>
 </main>
-<section class="bg-dark pad_t pad_b">
-    <div class="wrap wrap--large">
-        <h2 class="heading--section">Supported By</h2>
+<section class="bg-dark pad_t pad_b" role="contentinfo">
+    <div class="wrap wrap--small">
+        <h2 class="heading--section txt-center txt-light">Supported By</h2>
         <div class="grid grid--wide">
             <a class="grid__item third" href="http://www.uwhealth.org">
                 <img class="support-logo" src="http://cosmos.uwhealth.org/responsive/img/nav/build.125.logo_uwhealth_large.png" alt="UW Health">
@@ -135,9 +139,12 @@ End jQuery
 </section>
 
 <footer role="contentinfo" class="bg-dark txt-light">
-    <div class="wrap wrap--large">
+    <div class="wrap wrap--small">
         <hr>
-        <div class="grid">
+        <p class="txt-center">
+            Copyright &copy; 2016 Problem List Plus
+        </p>
+        <!-- <div class="grid">
             <div class="grid__item half">
                 Copyright &copy; 2016 Problem List Plus
             </div>
@@ -146,7 +153,7 @@ End jQuery
                     Legal stuff
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </footer>
 </body>

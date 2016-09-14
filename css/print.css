@@ -1,0 +1,180 @@
+*,
+*:before,
+*:after,
+*:first-letter,
+p:first-line,
+div:first-line,
+blockquote:first-line,
+li:first-line {
+    background: transparent !important;
+    color: #000 !important; /* Black prints faster:
+                               http://www.sanbeiji.com/archives/953 */
+    box-shadow: none !important;
+    text-shadow: none !important;
+    box-sizing: border-box;
+}
+
+a,
+a:visited {
+    text-decoration: underline;
+}
+
+a[href]:after {
+    content: " (" attr(href) ")";
+}
+
+abbr[title]:after {
+    content: " (" attr(title) ")";
+}
+
+/*
+ * Don't show links that are fragment identifiers,
+ * or use the `javascript:` pseudo protocol
+ */
+
+a[href^="#"]:after,
+a[href^="javascript:"]:after {
+    content: "";
+}
+
+pre {
+    white-space: pre-wrap !important;
+}
+pre,
+blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+}
+
+/*
+ * Printing Tables:
+ * http://css-discuss.incutio.com/wiki/Printing_Tables
+ */
+
+table {
+    border-collapse: collapse;
+    margin: 12pt;
+}
+
+td, th {
+    border: 1px solid #000;
+}
+
+thead {
+    display: table-header-group;
+}
+
+tr,
+img {
+    page-break-inside: avoid;
+}
+
+p,
+h2,
+h3 {
+    orphans: 3;
+    widows: 3;
+}
+
+h2,
+h3 {
+    page-break-after: avoid;
+}
+
+.top-nav,
+.modal,
+[role="contentinfo"],
+.btn {
+    display: none !important;
+}
+
+.grid > * {
+  letter-spacing: normal;
+  word-spacing: normal;
+}
+
+.grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left:  -1.5rem;
+  letter-spacing: -0.43em;
+}
+
+.opera:-o-prefocus,
+.grid {
+  word-spacing: -0.43em;
+}
+
+.grid__item {
+  display: inline-block;
+  padding-left:  1.5rem;
+  vertical-align: top;
+  width: 100%;
+  letter-spacing: normal;
+  word-spacing: normal;
+}
+
+.grid--right {
+  text-align: right;
+}
+
+.grid--right > .grid__item {
+  text-align: left;
+}
+
+.grid--middle > .grid__item {
+  vertical-align: middle;
+}
+
+.grid--full {
+  margin-left: 0;
+}
+
+.grid--full > .grid__item {
+  padding-left: 0;
+}
+
+.grid--narrow {
+  margin-left:  -0.75rem;
+}
+
+.grid--narrow > .grid__item {
+  padding-left:  0.75rem;
+}
+
+.grid--wide {
+  margin-left:  -3rem;
+}
+
+.grid--wide > .grid__item {
+  padding-left:  3rem;
+}
+
+.full {
+  width: 100%;
+}
+
+.two-fifths {
+  width: 40%;
+}
+
+.three-fifths {
+  width: 60%;
+}
+
+.quarter {
+  width: 25%;
+}
+
+.third {
+  width: 33.33333%;
+}
+
+.two-thirds {
+  width: 66.66667%;
+}
+
+.half {
+  width: 50%;
+}

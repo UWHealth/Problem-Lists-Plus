@@ -9,3 +9,7 @@
 .txt-center {
     text-align: center;
 }
+
+.txt-small {
+    @include font-size($type-small-size, $small-lh);
+}

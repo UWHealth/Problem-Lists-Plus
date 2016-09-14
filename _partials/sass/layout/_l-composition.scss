@@ -7,7 +7,7 @@
 
 .wrap--small {
 	@include type-space(padding, 1 0);
-	@include rems(max-width, 924px);
+	@include rems(max-width, 1004px);
 	width: 90%;
 
 	@include mq(small) {

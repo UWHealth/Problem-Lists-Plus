@@ -1,8 +1,8 @@
 .tabs {
-    @include type-space(padding-bottom, 2);
     display: flex;
     justify-content: center;
     vertical-align: top;
+    @include type-space(padding-bottom, 2);
     @include font-size($type-small-size, true);
 }
 
@@ -20,21 +20,23 @@
 
     &:checked:nth-of-type(2) ~ .tab-container .tabs__label:nth-of-type(2),
     &:checked:nth-of-type(1) ~ .tab-container .tabs__label:nth-of-type(1) {
-        color: #fff;
-        background-color: color(links);
         border-color: color(links);
+        background-color: color(links);
+        color: #fff;
     }
 }
 
 .tabs__label {
-    color: color(links);
     display: flex;
     flex-wrap: wrap;
-    flex: .25 0 0%;
+    flex: .25 1 rems(275px);
 	justify-content: center;
+    align-items: center;
     cursor: pointer;
-    @include type-space(padding, .5 1 .5 1);
     border: 2px solid;
+    @include type-space(padding, .5 .75 .5 .75);
+    max-width: rems(320px);
+    color: color(links);
 
     &:hover {
         color: color(links, light);

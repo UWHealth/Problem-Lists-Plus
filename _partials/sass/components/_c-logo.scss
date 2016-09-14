@@ -9,7 +9,7 @@
 .logo--hero {
     @include mq(smalls) {
         .hero & {
-            font-size: 8.5vw;
+            font-size: 9.5vw;
         }
     }
 }

@@ -19,7 +19,7 @@ Uses `$$scale-ratio` to create font sizes for headings starting from the `$$base
 
 ##### `$$scale-ratio`
 ###### Numeric (float)
-Used for `$$auto-scale-type` and for `modular-scale()`.
+Used for to determine `modular-scale()` multiple.
 
 ##### `$$rem-px-fallback`
 ###### Boolean
@@ -37,7 +37,7 @@ $font-looseness: 			30%;
 $auto-scale-type:           false;
 $scale-ratio:               1.4;
 
-$rem-px-fallback: 			true;
+$rem-px-fallback: 			false;
 
 $indented-paragraphs:       false;
 
@@ -154,7 +154,7 @@ Determines what classes (widths, pushes, pulls) get generated at `$$breakpoints`
 
 */
 
-$max-site-width:        1008px;
+$max-site-width:        1080px;
 
 $grid-columns:          12;
 $grid-gutter:           24px;
