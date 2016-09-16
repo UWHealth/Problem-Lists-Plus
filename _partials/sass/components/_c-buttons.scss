@@ -1,4 +1,5 @@
 .btn {
+    position: relative;
     display: inline-block;
     @include type-space(padding, .75);
     color: #fff;
@@ -45,6 +46,8 @@
 
 .btn--disabled {
     cursor: default;
+    box-shadow: none !important;
+    background-color: mix(color(links), color(type, light), 85%) !important;
 
     &:active {
         box-shadow: none;

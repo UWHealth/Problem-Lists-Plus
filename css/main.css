@@ -2337,6 +2337,7 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
 }
 
 .btn {
+  position: relative;
   display: inline-block;
   padding:  1.125rem;
   color: #fff;
@@ -2384,6 +2385,10 @@ Moving from `h6` up to `h1`, the heading font sizes get larger on a scale of 1.4
 
 .btn--disabled {
   cursor: default;
+  -webkit-box-shadow: none !important;
+     -moz-box-shadow: none !important;
+          box-shadow: none !important;
+  background-color: #b72031 !important;
 }
 
 .btn--disabled:active {
