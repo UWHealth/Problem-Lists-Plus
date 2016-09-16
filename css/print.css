@@ -178,3 +178,8 @@ h3 {
 .half {
   width: 50%;
 }
+
+.wrap {
+    display: block;
+    margin: 5pt auto;
+}
