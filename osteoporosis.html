@@ -285,10 +285,8 @@ function template(data) {
         current = feed.entry[i];
         line = '<tr>';
         if (lineHead != current.gsx$pharmsubclass.$t && current.gsx$pharmsubclass.$t != '') {
-            if (row != 0) {
-                html = html.replace('@@@@@', row);
-                row = 0;
-            }
+            html = html.replace('@@@@@', row);
+            row = 0;
             lineHead = current.gsx$pharmsubclass;
             line += '<th rowspan="@@@@@" scope="row">' +
                 current.gsx$pharmsubclass.$t +
