@@ -271,7 +271,7 @@ End jQuery
     });
 </script>
 <script>
-//build people template
+//build template
 function template(data) {
     var feed = data.feed;
     var html = '<article class="grid__item three-fifths"><table class="table--fixed">' +
@@ -306,17 +306,15 @@ function template(data) {
 //AJAX spreadsheet data
 (function(){
     var url = "https://spreadsheets.google.com/feeds/list/1bouu2Ni3akgRGp9G4-kUv2z18RIKPs2n8MDRkkhsmy8/WORKSHEET/public/full?alt=json";
-    var sheets = 2;
-    var html;
+    var sheets = 1;
 
-    for (var i = 1; i < sheets; i++) {
-        var json = url.replace('WORKSHEET', ""+i+"");
+    for (var i = 1; i <= sheets; i++) {
+        var json = url.replace('WORKSHEET', i);
 
         $.getJSON(json).done(function(data) {
             $(template(data)).prependTo($('#js-osteo'));
         });
     }
-
 }());
 </script>
 <section class="bg-dark pad_t pad_b" role="contentinfo">

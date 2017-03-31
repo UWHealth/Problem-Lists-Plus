@@ -158,17 +158,15 @@ End jQuery
     //AJAX spreadsheet data
     (function(){
         var url = "https://spreadsheets.google.com/feeds/list/1XDhHCs4h9-OqTHn8nh12Ti1cI--3oaJSOksOdZc7Zsw/WORKSHEET/public/full?alt=json";
-        var sheets = 6;
-        var html;
+        var sheets = 5;
 
-        for (var i = 1; i < sheets; i++) {
-            var json = url.replace('WORKSHEET', ""+i+"");
+        for (var i = 1; i <= sheets; i++) {
+            var json = url.replace('WORKSHEET', i);
 
             $.getJSON(json).done(function(data) {
                 $(template(data)).prependTo($('#js-people'));
             });
         }
-
     }());
     </script>
 </main>
