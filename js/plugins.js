@@ -1,5 +1,6 @@
 (function(){
     "use strict";
+
     ;(function() {
     
     	var ParticleNetworkAnimation, PNA;
@@ -312,5 +313,4 @@
     	}
     }());
     
-
 }());

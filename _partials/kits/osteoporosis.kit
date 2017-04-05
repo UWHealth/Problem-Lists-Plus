@@ -21,8 +21,8 @@
 
 <main class="space_b_2 space_t_neg" role="main">
     <section class="wrap wrap--small">
-        <div class="grid grid--wide grid--stack">
-            <article class="grid__item two-fifths">
+        <div id="js-osteo" class="grid grid--wide grid--stack">
+<!--             <article class="grid__item two-fifths">
                 <table>
                     <colgroup>
                         <col>
@@ -184,7 +184,7 @@
                     </tbody>
                 </table>
             </article>
-        </div>
+ -->        </div>
     </section>
 </main>
 <div class="js-modal modal__bg js-modal--dismiss"></div>
@@ -212,5 +212,52 @@
             $('.js-modal').hide();
         });
     });
+</script>
+<script>
+//build template
+function template(data) {
+    var feed = data.feed;
+    var html = '<article class="grid__item three-fifths"><table class="table--fixed">' +
+        '<thead><th>Pharm Subclass</th><th>Medication</th><th>Rx Norm</th></thead>' +
+        '<colgroup><col><col class="loinc"><col class="loinc"></colgroup>';
+    var lineHead = '';
+    var row = 0;
+    var current, line;
+
+    for (var i = 0; i < feed.entry.length; i++){
+        current = feed.entry[i];
+        line = '<tr>';
+        if (lineHead != current.gsx$pharmsubclass.$t && current.gsx$pharmsubclass.$t != '') {
+            html = html.replace('@@@@@', row);
+            row = 0;
+            lineHead = current.gsx$pharmsubclass;
+            line += '<th rowspan="@@@@@" scope="row">' +
+                current.gsx$pharmsubclass.$t +
+                '</th>';
+        }
+        line += '<td>' + current.gsx$medication.$t + '</td>' +
+            '<td>' + current.gsx$rxnorm.$t + '</td></tr>';
+        html += line;
+        row++;
+    }
+
+    html += '</table></article>';
+
+    return html;
+}
+
+//AJAX spreadsheet data
+(function(){
+    var url = "https://spreadsheets.google.com/feeds/list/1bouu2Ni3akgRGp9G4-kUv2z18RIKPs2n8MDRkkhsmy8/WORKSHEET/public/full?alt=json";
+    var sheets = 1;
+
+    for (var i = 1; i <= sheets; i++) {
+        var json = url.replace('WORKSHEET', i);
+
+        $.getJSON(json).done(function(data) {
+            $(template(data)).prependTo($('#js-osteo'));
+        });
+    }
+}());
 </script>
 <!--@import 'foot.kit'-->
