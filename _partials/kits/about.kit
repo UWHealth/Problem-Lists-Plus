@@ -29,7 +29,7 @@
         <h2 class="heading--section" id="experts">Specialty Content Experts</h2>
         <div id="js-people" class="grid grid--stack">
 
-<!--            <p class="grid__item space_t"><strong>Cororonary Artery Disease</strong></p>
+            <p class="grid__item space_t"><strong>Cororonary Artery Disease</strong></p>
             <article class="grid__item third"><div class="panel space_b_half"><h3 class="h6 txt-normal">Dr. Ernest Mazzaferri</h3><div class="panel__foot">Cardiology, Ohio State</div></div></article>
             <article class="grid__item third"><div class="panel space_b_half"><h3 class="h6 txt-normal">Dr. Ian Rogers</h3><div class="panel__foot">Cardiology, Stanford</div></div></article>
             <article class="grid__item third"><div class="panel space_b_half"><h3 class="h6 txt-normal">Dr. Sandeep Das</h3><div class="panel__foot">Cardiology, UT-Southwestern</div></div></article>
@@ -67,11 +67,11 @@
             <article class="grid__item third"><div class="panel space_b_half"><h3 class="h6 txt-normal">Dr. Jason Fish</h3><div class="panel__foot">General Medicine, UT-Southwestern</div></div></article>
             <article class="grid__item third"><div class="panel space_b_half"><h3 class="h6 txt-normal">Dr. Brent Wisse</h3><div class="panel__foot">Endocrinology, U. Washington</div></div></article>
             <article class="grid__item third"><div class="panel space_b_half"><h3 class="h6 txt-normal">Dr. Karen Hansen</h3><div class="panel__foot">Rheumatology, U. Wisconsin</div></div></article>
-            <article class="grid__item third"><div class="panel space_b_half"><h3 class="h6 txt-normal">Dr. Dara Mize</h3><div class="panel__foot">Endocrinology, Vanderbilt</div></div></article> -->
+            <article class="grid__item third"><div class="panel space_b_half"><h3 class="h6 txt-normal">Dr. Dara Mize</h3><div class="panel__foot">Endocrinology, Vanderbilt</div></div></article>
         </div>
     </div>
     <!--@import scripts-->
-    <script>
+    <!-- <script>
     //build people template
     function template(data) {
         var feed = data.feed;
@@ -93,7 +93,7 @@
                 '</article>'
             ].join('');
             html += person;
-        }
+        };
 
         return html;
     }
@@ -101,16 +101,18 @@
     //AJAX spreadsheet data
     (function(){
         var url = "https://spreadsheets.google.com/feeds/list/1XDhHCs4h9-OqTHn8nh12Ti1cI--3oaJSOksOdZc7Zsw/WORKSHEET/public/full?alt=json";
-        var sheets = 5;
+        var sheets = 6;
+        var html;
 
-        for (var i = 1; i <= sheets; i++) {
-            var json = url.replace('WORKSHEET', i);
+        for (var i = 1; i < sheets; i++) {
+            var json = url.replace('WORKSHEET', ""+i+"");
 
             $.getJSON(json).done(function(data) {
                 $(template(data)).prependTo($('#js-people'));
             });
         }
+
     }());
-    </script>
+    </script> -->
 </main>
 <!--@import 'foot.kit'-->
